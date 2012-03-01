@@ -26,10 +26,12 @@ nav, section {
 
 html {
 	background-color: #eee;
-	border:2em solid #fff;
-	font-family: Helvetica, Arial, Verdana, sans-serif;
+	border:1em solid #fff;
+	font-size-adjust:0.5;
+	font-weight:normal;
+	font-style:normal; 
 	font-size: 100%;
-	height:100%;
+	min-height:100%;
 	line-height:1.5;
 	overflow-y: scroll;
 	-webkit-text-size-adjust: 100%;
@@ -124,7 +126,18 @@ a:focus {
 
 /* 2. Typography
  **********************************************************************/
- 
+
+/*
+div { font-family:"Skolar Regular", 'Times New Roman', serif; font-size-adjust:0.47; font-weight:normal; font-style:normal; }
+div { font-family:"Skolar Bold", 'Times New Roman', serif; font-size-adjust:0.49; font-weight:bold; font-style:normal; }
+div { font-family:"Tanger Serif Medium Regular", Cambria, Georgia, serif; font-size-adjust:0.5; font-weight:normal; font-style:normal; }*/
+
+html {
+	font-family:"Skolar Regular", 'Times New Roman', serif;
+	font-size-adjust:0.47;
+	font-weight:normal;
+	font-style:normal;
+}
 
  
 h1,
@@ -165,10 +178,20 @@ small,.milli {
 
 h1, h2,
 h3, h4,
+h5, h6 {
+	font-family:"Skolar Bold", 'Times New Roman', serif;
+	font-size-adjust:0.49;
+	font-weight:bold;
+	font-style:normal;
+}
+
+h1, h2,
+h3, h4,
 h5, h6,
 p {
 	margin:0 0 1em;	
 }
+
 
 
 /* 3. Blocks
@@ -237,12 +260,51 @@ p {
  **********************************************************************/
  
 .body {
-	padding: 2em;
+	padding: 1em;
 }
 
 
 /* 5. Header
  **********************************************************************/
+
+header {
+	border-bottom:8px solid rgba(255, 255, 255, 0.8);
+	position: relative;
+}
+
+header:before,
+header:after {
+	content:'';
+	background: #fff;
+	display: block;
+	position: absolute;
+	height:8px;
+	width:8px;
+	bottom:-8px;
+	
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	border-radius: 1em;
+}
+
+header:before {
+	left:-12px;
+}
+
+header:after {
+	right:-12px;
+}
+
+.logo {
+	font-size:3.571428571em; /* 50 / 14 */
+}
+
+.logo .milli {
+	display: block;
+	font-weight: normal;
+	font-family:"Skolar Regular", 'Times New Roman', serif;
+	font-size:.36em; /* 18 / 50 */
+}
 
 
 
