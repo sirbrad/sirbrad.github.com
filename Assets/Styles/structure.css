@@ -305,7 +305,7 @@ header:after,
 .listing li + li:before,
 .listing li + li:after {
 	content:'';
-	background: #fff;
+	background: #FBFBFB;
 	display: block;
 	position: absolute;
 	
@@ -342,7 +342,7 @@ header:after,
  **********************************************************************/
 
 header {
-	border-bottom:6px solid rgba(255, 255, 255, 0.8);
+	border-bottom:6px solid #FBFBFB;
 	margin-bottom: 2em;
 	position: relative;
 	text-align: center;
@@ -364,16 +364,18 @@ nav li + li {
 
 .listing {
 	list-style:none;
+	margin-bottom: 4em;
 	padding: 0;
 }
 
 .listing li {
-	margin-bottom: 2em;
+	margin-bottom: 3em;
 }
 
 .listing li + li {
-	border-top:4px solid #fff;
-	padding-top: 2em;
+	border-top:4px solid #FBFBFB;
+	margin-bottom: 1em;
+	padding-top: 1em;
 	position: relative;
 }
 
@@ -391,11 +393,10 @@ nav li + li {
 
 
 
-
 /* 7. Footer
  **********************************************************************/
  
- 
+  
 .module {
 	background-color:#fff;
 	margin-bottom: 1em;
@@ -411,5 +412,5 @@ nav li + li {
 }
 
 footer .milli {
-	color:rgba(0, 0, 0, 0.6);	
+	/*color:rgba(0, 0, 0, 0.6);*/
 }
