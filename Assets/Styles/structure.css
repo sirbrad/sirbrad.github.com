@@ -40,11 +40,6 @@ html {
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
-	-webkit-transition:border-width 0.1s ease;
-	-moz-transition:border-width 0.1s ease;
-	-ms-transition:border-width 0.1s ease;
-	-o-transition:border-width 0.1s ease;
-	transition:border-width 0.1s ease;
 }
 
 body {
@@ -413,4 +408,8 @@ nav li + li {
 
 .module .beta {
 	margin-bottom: 0.5em;
+}
+
+footer .milli {
+	color:rgba(0, 0, 0, 0.6);	
 }
