@@ -22,3 +22,43 @@ html {
 .body {
 	padding: 2em;
 }
+
+
+/* 3. Header
+ **********************************************************************/
+ 
+
+header {
+	border-bottom-width: 8px;
+	padding-bottom: 1em;
+	text-align: left
+}
+
+header:before,
+header:after {
+	height:8px;
+	width:8px;
+	bottom:-8px;
+}
+
+header:before {
+	left:-6px;
+}
+
+header:after {
+	right:-6px;
+}
+
+nav {
+	position: absolute;
+	right:0;
+	top:0;	
+}
+
+
+/* 4. Listing
+ **********************************************************************/
+ 
+.listing h2 {
+	margin:0;
+}
