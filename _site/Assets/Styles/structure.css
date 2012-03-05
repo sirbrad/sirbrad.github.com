@@ -7,6 +7,8 @@
 	4. Layout
 	5. Header
 	6. Listing
+	7. About module
+	8. Footer
 
  **********************************************************************/
  
@@ -145,7 +147,7 @@ p > a:focus {
  **********************************************************************/
 
 /*
-div { font-family:"Skolar Regular", 'Times New Roman', serif; font-size-adjust:0.47; font-weight:normal; font-style:normal; }
+div { font-amily:"Skolar Regular", 'Times New Roman', serif; font-size-adjust:0.47; font-weight:normal; font-style:normal; }
 div { font-family:"Skolar Bold", 'Times New Roman', serif; font-size-adjust:0.49; font-weight:bold; font-style:normal; }
 div { font-family:"Tanger Serif Medium Regular", Cambria, Georgia, serif; font-size-adjust:0.5; font-weight:normal; font-style:normal; }*/
 
@@ -197,8 +199,6 @@ h1, h2,
 h3, h4,
 h5, h6,
 strong {
-	font-family:"Skolar Bold", 'Times New Roman', serif;
-	font-size-adjust:0.49;
 	font-weight:bold;
 	font-style:normal;
 }
@@ -207,7 +207,7 @@ h1, h2,
 h3, h4,
 h5, h6,
 p {
-	margin:0 0 1em;	
+	margin:0 0 1.5em;	
 	text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.3);
 }
 
@@ -300,12 +300,12 @@ p {
 }
 
 
-header:before,
+/*header:before,
 header:after,
 .listing li + li:before,
 .listing li + li:after {
 	content:'';
-	background: #fff;
+	background: #FBFBFB;
 	display: block;
 	position: absolute;
 	
@@ -336,13 +336,13 @@ header:before,
 header:after,
 .listing li + li:after {
 	right:-2px;
-}
+}*/
 
 /* 5. Header
  **********************************************************************/
 
-header {
-	border-bottom:6px solid rgba(255, 255, 255, 0.8);
+.header {
+	border-bottom:6px solid #FBFBFB;
 	margin-bottom: 2em;
 	position: relative;
 	text-align: center;
@@ -353,8 +353,37 @@ header {
 	margin-bottom: 0.2em;
 }
 
+.header .delta {
+	font-weight: normal;
+}
+
 nav li + li {
 	margin-left:1.8em;
+}
+
+
+/* 6. Post
+ **********************************************************************/
+
+.post {
+	margin-bottom:3em;
+}
+
+.post .beta {
+	margin-bottom:0;
+}
+
+.post .delta  {
+	margin-bottom: 0.2em;
+}
+
+.post .milli {
+	margin-bottom:2em;
+}
+
+.post .btn {
+	display: inline-block;
+	margin:2em 0 0 -.5em;
 }
 
 
@@ -364,38 +393,30 @@ nav li + li {
 
 .listing {
 	list-style:none;
+	margin-bottom: 3em;
 	padding: 0;
 }
 
 .listing li {
-	margin-bottom: 2em;
-}
-
-.listing li + li {
-	border-top:4px solid #fff;
-	padding-top: 2em;
+	border-top:4px solid #FBFBFB;
+	margin-bottom: 1em;
+	padding-top: 1em;
 	position: relative;
-}
-
-.listing li + li h2 {
-	font-size:1.25em; /* 20 / 16 */
 }
 
 .listing h2 {
 	margin-bottom: 0.2em;
 }
 
-.listing .btn {
-	margin-left:-.5em;
+.listing p {
+	margin: 0;
 }
 
 
-
-
-/* 7. Footer
+/* 7. About module
  **********************************************************************/
  
- 
+  
 .module {
 	background-color:#fff;
 	margin-bottom: 1em;
@@ -406,10 +427,25 @@ nav li + li {
 	border-radius:0.15em;
 }
 
-.module .beta {
-	margin-bottom: 0.5em;
+.module .epsilon {
+	font-weight: normal;
+}
+
+.module .gamma ,
+.module .epsilon,
+.module p {
+	margin-bottom: 1em;
+}
+
+
+/* 8. Footer
+ **********************************************************************/
+
+footer {
+	padding:0 1em;
 }
 
 footer .milli {
-	color:rgba(0, 0, 0, 0.6);	
+	color:rgba(0, 0, 0, 0.6);
+	margin: 0;
 }

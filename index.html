@@ -1,28 +1,31 @@
-<!doctype html>
-<!--[if IE 8]><html class="no-js ie8" lang="en"><![endif]-->
-<!--[if IE 9]><html class="no-js ie9" lang="en"><![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>	
-    <title>Bradley Few . com</title>
-    <script src="Assets/Scripts/Utils/modernizr.min.js"></script>
-    <meta charset="utf-8">
-    <meta name="author" content="sirBrad" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/plain" rel="author" href="humans.txt">
-    <link rel="stylesheet" href="http://f.fontdeck.com/s/css/85KWbK2o4t6U7ij4tCKK2xJ7L3E/bradleyfew.com/16762.css" type="text/css" />
-    <link rel="stylesheet" href="Assets/Styles/structure.css" />
-    <link rel="stylesheet" media="only screen and (min-width: 600px)" href="Assets/Styles/600.css" />
-    <link rel="stylesheet" media="only screen and (min-width: 768px)" href="Assets/Styles/768.css" />
-    <!--[if IE]>
-    	<link rel="stylesheet" href="Assets/Styles/IE.css" />
-    <![endif]-->
-    <script src="Assets/Scripts/Utils/respond.min.js"></script>
-</head>
-<body>
-	<div class="contain body">
-    	<h1 style="font-size:8em; margin-top:0.8em; text-align:center">It's on<br>it's way!<span style="display:block; font-size:16px;">Give me a chance. JESUS</span></h1>
-        <p></p>
-	</div>
-    <script data-main="Assets/Scripts/main" src="Assets/Scripts/Require.min.js"></script>
-</body>
-</html>
+---
+layout: layout
+title: Bradley Few - front end developer
+---
+
+{% for post in site.posts limit:1 %}
+
+<article class="post lead">
+	<header>
+		<h1 class="beta"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+		<p class="milli">5th January 2012. Tagged: <a href="#">css</a>, <a href="ui">ui</a>, <a href="#">lab</a></p>
+	</header>
+	{{ post.content | truncatewords: 50 }}
+	<a class="btn" href="post.html">Continue reading &raquo;</a>
+</article>
+		
+{% endfor %}
+
+
+<ol class="listing">
+    {% for post in site.posts %}
+        {% if forloop.index > 1 %}
+            <li>
+                <header>
+                    <h1 class="beta"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                    <p class="milli">{{ post.date | date: "%B %e, %Y" }}. Tagged: {% for post in site.posts %}<a href="#">{{ post.tags }}</a>{% endfor %}</p>
+                </header>
+            </li>
+    	{% endif %}
+    {% endfor %}
+</ol>
