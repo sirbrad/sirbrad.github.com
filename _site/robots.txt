@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /Assets/Images/
+Disallow: /Assets/Scripts/
+Disallow: /Assets/Styles/
+Crawl-delay: 1 # number of seconds
+Sitemap: URL
