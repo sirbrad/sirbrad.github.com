@@ -3,14 +3,25 @@ layout: layout
 title: Bradley Few - front end developer
 ---
 
+{% for post in site.posts limit:1 %}
 
-<ol class="listing">
-      {% for post in site.posts %}
-	<li>
 		<header>
 			<h1 class="beta"><a href="{{ post.url }}">{{ post.title }}</a></h1>
 			<p class="milli">{{ post.date | date: "%B %e, %Y" }}. Tagged: {% for post in site.posts %}<a href="#">{{ post.tags }}</a>{% endfor %}</p>
 		</header>
-	</li>
-      {% endfor %}
+
+{% endfor %}
+
+
+<ol class="listing">
+    {% for post in site.posts %}
+        {% if forloop.index > 1 %}
+            <li>
+                <header>
+                    <h1 class="beta"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                    <p class="milli">{{ post.date | date: "%B %e, %Y" }}. Tagged: {% for post in site.posts %}<a href="#">{{ post.tags }}</a>{% endfor %}</p>
+                </header>
+            </li>
+    	{% endif %}
+    {% endfor %}
 </ol>
