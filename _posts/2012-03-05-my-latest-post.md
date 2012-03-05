@@ -4,7 +4,7 @@ title: Cats online
 category: 'cats'
 ---
 
-#History
+##History
 
 As early as the 1870s, British portrait photographer Harry Pointer created a carte de visite series featuring felines posed in various situations, to which he added amusing text intended to further enhance their appeal.[5]
 However, the first recorded use of the term "lolcat" is from the anonymous imageboard, 4chan.[6][7][8] The word "Lolcat" is attested as early as June 2006, and 
