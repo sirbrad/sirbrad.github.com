@@ -382,7 +382,8 @@ nav li + li {
 }
 
 .post .btn {
-	margin-left:-.5em;
+	display: inline-block;
+	margin:2em 0 0 -.5em;
 }
 
 
