@@ -1,7 +1,10 @@
 ---
 layout: post
 title: Arsenal wiki
-category: 'html'
+categories:
+- html
+- random
+- ruby
 ---
 
 Arsenal Football Club is an English professional football club based in Holloway, London, which currently plays in the Premier League. One of the most successful clubs in English football, it has won 13 First Division and Premier League titles and 10 FA Cups. Arsenal holds the record for the longest uninterrupted period in the English top flight and is the only side to have completed a Premier League season unbeaten (in the 2003-04 season). Arsenal was founded in 1886 in Woolwich and in 1893 became the first club from the south of England to join the Football League.

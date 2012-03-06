@@ -1,7 +1,10 @@
 ---
 layout: post
 title: Cats online
-category: 'cats'
+tag:
+- html
+- ruby
+- random
 ---
 
 ##History
