@@ -386,6 +386,11 @@ nav li + li {
 	margin:2em 0 0 -.5em;
 }
 
+.post .btn:hover,
+.post .btn:focus {
+	text-decoration:none;	
+}
+
 
 /* 6. Listing
  **********************************************************************/
@@ -404,7 +409,7 @@ nav li + li {
 	position: relative;
 }
 
-.listing h2 {
+.listing .beta {
 	margin-bottom: 0.2em;
 }
 
