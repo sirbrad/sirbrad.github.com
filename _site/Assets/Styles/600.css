@@ -28,7 +28,11 @@ html {
  **********************************************************************/
  
 
+<<<<<<< HEAD
 header {
+=======
+.header {
+>>>>>>> gh-pages
 	border-bottom-width: 8px;
 	padding-bottom: 1em;
 	text-align: left

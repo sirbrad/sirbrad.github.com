@@ -7,6 +7,11 @@
 	4. Layout
 	5. Header
 	6. Listing
+<<<<<<< HEAD
+=======
+	7. About module
+	8. Footer
+>>>>>>> gh-pages
 
  **********************************************************************/
  
@@ -145,7 +150,11 @@ p > a:focus {
  **********************************************************************/
 
 /*
+<<<<<<< HEAD
 div { font-family:"Skolar Regular", 'Times New Roman', serif; font-size-adjust:0.47; font-weight:normal; font-style:normal; }
+=======
+div { font-amily:"Skolar Regular", 'Times New Roman', serif; font-size-adjust:0.47; font-weight:normal; font-style:normal; }
+>>>>>>> gh-pages
 div { font-family:"Skolar Bold", 'Times New Roman', serif; font-size-adjust:0.49; font-weight:bold; font-style:normal; }
 div { font-family:"Tanger Serif Medium Regular", Cambria, Georgia, serif; font-size-adjust:0.5; font-weight:normal; font-style:normal; }*/
 
@@ -197,8 +206,11 @@ h1, h2,
 h3, h4,
 h5, h6,
 strong {
+<<<<<<< HEAD
 	font-family:"Skolar Bold", 'Times New Roman', serif;
 	font-size-adjust:0.49;
+=======
+>>>>>>> gh-pages
 	font-weight:bold;
 	font-style:normal;
 }
@@ -207,7 +219,11 @@ h1, h2,
 h3, h4,
 h5, h6,
 p {
+<<<<<<< HEAD
 	margin:0 0 1em;	
+=======
+	margin:0 0 1.5em;	
+>>>>>>> gh-pages
 	text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.3);
 }
 
@@ -300,7 +316,11 @@ p {
 }
 
 
+<<<<<<< HEAD
 header:before,
+=======
+/*header:before,
+>>>>>>> gh-pages
 header:after,
 .listing li + li:before,
 .listing li + li:after {
@@ -336,12 +356,20 @@ header:before,
 header:after,
 .listing li + li:after {
 	right:-2px;
+<<<<<<< HEAD
 }
+=======
+}*/
+>>>>>>> gh-pages
 
 /* 5. Header
  **********************************************************************/
 
+<<<<<<< HEAD
 header {
+=======
+.header {
+>>>>>>> gh-pages
 	border-bottom:6px solid #FBFBFB;
 	margin-bottom: 2em;
 	position: relative;
@@ -353,40 +381,86 @@ header {
 	margin-bottom: 0.2em;
 }
 
+<<<<<<< HEAD
+=======
+.header .delta {
+	font-weight: normal;
+}
+
+>>>>>>> gh-pages
 nav li + li {
 	margin-left:1.8em;
 }
 
 
+<<<<<<< HEAD
+=======
+/* 6. Post
+ **********************************************************************/
+
+.post {
+	margin-bottom:3em;
+}
+
+.post .beta {
+	margin-bottom:0;
+}
+
+.post .delta  {
+	margin-bottom: 0.2em;
+}
+
+.post .milli {
+	margin-bottom:2em;
+}
+
+.post .btn {
+	display: inline-block;
+	margin:2em 0 0 -.5em;
+}
+
+
+>>>>>>> gh-pages
 /* 6. Listing
  **********************************************************************/
  
 
 .listing {
 	list-style:none;
+<<<<<<< HEAD
 	margin-bottom: 4em;
+=======
+	margin-bottom: 3em;
+>>>>>>> gh-pages
 	padding: 0;
 }
 
 .listing li {
+<<<<<<< HEAD
 	margin-bottom: 3em;
 }
 
 .listing li + li {
+=======
+>>>>>>> gh-pages
 	border-top:4px solid #FBFBFB;
 	margin-bottom: 1em;
 	padding-top: 1em;
 	position: relative;
 }
 
+<<<<<<< HEAD
 .listing li + li h2 {
 	font-size:1.25em; /* 20 / 16 */
 }
 
+=======
+>>>>>>> gh-pages
 .listing h2 {
 	margin-bottom: 0.2em;
 }
 
+<<<<<<< HEAD
 .listing .btn {
 	margin-left:-.5em;
 }
@@ -394,6 +468,14 @@ nav li + li {
 
 
 /* 7. Footer
+=======
+.listing p {
+	margin: 0;
+}
+
+
+/* 7. About module
+>>>>>>> gh-pages
  **********************************************************************/
  
   
@@ -407,10 +489,34 @@ nav li + li {
 	border-radius:0.15em;
 }
 
+<<<<<<< HEAD
 .module .beta {
 	margin-bottom: 0.5em;
 }
 
 footer .milli {
 	/*color:rgba(0, 0, 0, 0.6);*/
+=======
+.module .epsilon {
+	font-weight: normal;
+}
+
+.module .gamma ,
+.module .epsilon,
+.module p {
+	margin-bottom: 1em;
+}
+
+
+/* 8. Footer
+ **********************************************************************/
+
+footer {
+	padding:0 1em;
+}
+
+footer .milli {
+	color:rgba(0, 0, 0, 0.6);
+	margin: 0;
+>>>>>>> gh-pages
 }
