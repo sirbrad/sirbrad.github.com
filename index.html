@@ -1,33 +1,37 @@
----
-layout: layout
-title: Bradley Few - front end developer
----
-
-
-
-{% for post in site.posts limit:1 %}
-
-<article class="post lead">
-	<header>
-		<h1 class="beta"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-		<p class="milli">5th January 2012. Tagged: <a href="#">{{ post.tags }}</a></p>
-	</header>
-	{{ post.content | truncatewords: 50 }}
-	<a class="btn" href="{{ post.url }}">Continue reading &raquo;</a>
-</article>
-		
-{% endfor %}
-
-
-<ol class="listing">
-    {% for post in site.posts %}
-        {% if forloop.index > 1 %}
-            <li>
-                <header>
-                    <h1 class="beta"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-                    <p class="milli">{{ post.date | date: "%B %e, %Y" }}. Tagged: {% for tag in post.tags %} <a href="/tags/{{ tag | slugize}}">{{ tag }}</a> {% endfor %}</p>
-                </header>
-            </li>
-    	{% endif %}
-    {% endfor %}
-</ol>
+<!doctype html>
+<!--[if IE 7]><html class="no-js ie7" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <script src="Assets/Scripts/Utils/modernizr.min.js"></script>
+    <meta name="author" content="sirBrad" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/plain" rel="author" href="humans.txt">
+    <link rel="stylesheet" href="http://f.fontdeck.com/s/css/f+VvJObKCYORZH9JO/VTNhm601Q/192.168.0.6/16762.css" type="text/css" />
+    <link rel="stylesheet" href="Assets/Styles/style.css" />
+</head>
+<body>
+	<div class="site-contain contain">
+		<header role="banner">
+			<span class="circle avatar"><img class="circle avatar__item" src="https://twimg0-a.akamaihd.net/profile_images/1885861083/image.jpg" alt="Bradley Few Avatar" /></span>
+			<hgroup>
+				<h1 class="h1">Bradley Few</h1>
+				<!--<h2 class="h2">Front end developer</h2>-->
+			</hgroup> 
+		</header>
+		<section class="site-body">
+			<ol class="hoz socials">
+				<li><a href="#" class="social__item spr twitter"></a></li>
+			</ol>
+		</section>
+		<footer class="site-foot">
+			<p>Sweeet.</p>
+		</footer>
+		<!--<img src="https://twimg0-a.akamaihd.net/profile_images/1885861083/image.jpg" alt="Bradley Few Avatar" />-->
+	</div>
+    <script data-main="Assets/Scripts/main" src="Assets/Scripts/Require.min.js"></script>
+</body>
+</html>

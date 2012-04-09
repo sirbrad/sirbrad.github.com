@@ -1,0 +1,263 @@
+/* Base
+   ========================================================================== */
+article, aside, dialog, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+html {
+  border: 1em solid #fff;
+  font-family: "Museo 300", Verdana, serif;
+  font-size: 16px;
+  font-size-adjust: 0.5;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+  color: #444444;
+  overflow-y: scroll;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background-color: #eeeeee;
+  margin: 0; }
+
+/* Links
+   ========================================================================== */
+a {
+  color: #105cb6;
+  text-decoration: none; }
+
+/* Addresses outline displayed oddly in Chrome */
+a:focus {
+  outline: thin dotted; }
+
+/* Improves readability when focused and also mouse hovered in all browsers */
+a:hover, a:active {
+  outline: 0; }
+
+a:hover, a:focus, a:active {
+  color: #0a3870;
+  text-decoration: underline; }
+
+/*
+ * 1. Allows images to undergo proportional down-scaling within a container
+ * 2. Removes border when inside 'a' element in IE8/9, FF3
+ * 3. Removes excess space below inline images
+ */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: middle; }
+
+/* Lists
+   ========================================================================== */
+ul, ol {
+  padding-left: 30px; }
+
+ul ul, ol ol, ul ol, ol ul {
+  margin: 0; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin-left: 30px; }
+
+/* Tables
+   ========================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.data-table {
+  margin: 1.4em 0; }
+
+.data-table caption {
+  padding: 0.5em 10px;
+  text-align: left;
+  color: #777; }
+
+.data-table th, .data-table td {
+  padding: 0.5em 10px;
+  border: 1px solid #ccc;
+  text-align: left; }
+
+.data-table tbody tr:nth-child(odd) th, .data-table tbody tr:nth-child(odd) td {
+  background: #f8f8f8; }
+
+.data-table--wide {
+  width: 100%; }
+
+/* Typography
+   ========================================================================== */
+.hx, h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, .h1-l, .h1-xl {
+  font-family: "Museo 700", Verdana, serif;
+  font-size-adjust: 0.51;
+  font-weight: 700;
+  font-style: normal;
+  margin: 1em 0;
+  line-height: 1.1;
+  color: #222222; }
+
+h6, .h6 {
+  font-size: 0.875em;
+  color: #777; }
+
+h5, .h5 {
+  font-size: 0.875em; }
+
+h4, .h4 {
+  font-size: 1em; }
+
+h3, .h3 {
+  font-size: 1.25em; }
+
+h2, .h2 {
+  margin: 1em 0 0.75em;
+  font-size: 1.5em; }
+
+h1, .h1 {
+  margin: 0 0 0.75em;
+  font-size: 2em; }
+
+.h1-l, .h1-xl {
+  margin: 0 0 0.5em;
+  font-size: 3.375em;
+  font-weight: normal; }
+
+.h1-xl {
+  margin: 0 0 0.5em;
+  font-size: 4.5em;
+  font-weight: normal; }
+
+small, .txt-s {
+  font-size: 75%; }
+
+.txt-xl {
+  font-size: 1.5em; }
+
+/*
+ * Block-level margins
+ */
+p, blockquote, ul, ol, dl, menu, pre {
+  margin: 0 0 1.4em; }
+
+/* Clearfix
+   ========================================================================== */
+/* ClearFix - Ref: nicolasgallagher.com/micro-clearfix-hack/ */
+.cf {
+  zoom: 1; }
+
+.cf:before, .cf:after {
+  content: "";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+/* Media object
+   ========================================================================== */
+/* Media Block - Ref: www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/ */
+.media {
+  display: block; }
+
+.media .img {
+  float: left;
+  margin-right: 10px; }
+
+.media .body {
+  overflow: hidden;
+  margin-bottom: 0; }
+
+/* Horizontal block
+   ========================================================================== */
+/*Hoz Block (Horizontal) - Ref: http://csswizardry.com/2011/09/the-nav-abstraction/ */
+.hoz {
+  list-style: none;
+  padding-left: 0; }
+
+.hoz, .hoz dd {
+  margin-left: 0; }
+
+.hoz li, .hoz dt, .hoz dd {
+  display: inline; }
+
+.hoz a {
+  display: inline-block; }
+
+/* Hidden
+   ========================================================================== */
+/* http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ */
+.hidden {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+/* Contain
+   ========================================================================== */
+.contain {
+  max-width: 58.75em;
+  padding: 0 10px;
+  margin: 0 auto; }
+
+/* Contain
+   ========================================================================== */
+.spr:before {
+  content: '';
+  background-color: transparent;
+  background-image: url(../Images/Css/Sprite.png);
+  background-repeat: no-repeat;
+  display: inline-block; }
+
+/* Circle
+   ========================================================================== */
+.circle {
+  -webkit-border-radius: 20em;
+  -moz-border-radius: 20em;
+  border-radius: 20em; }
+
+/* Body
+   ========================================================================== */
+.site-contain {
+  padding-top: 3em;
+  text-align: center; }
+
+/* Socials
+   ========================================================================== */
+.socials a {
+  background-color: #fff;
+  display: block;
+  height: 60px;
+  position: relative;
+  text-align: center;
+  width: 60px;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  -webkit-border-radius: 10em;
+  -moz-border-radius: 10em;
+  border-radius: 10em; }
+
+.twitter:hover {
+  background-color: #33CCFF; }
+.twitter:before {
+  background-position: 0 0;
+  height: 27px;
+  position: relative;
+  top: 1em;
+  width: 34px; }
+
+/* Avatar
+   ========================================================================== */
+.avatar {
+  background-color: #fff;
+  display: inline-block;
+  margin-bottom: 2em;
+  padding: .5em;
+  width: 60%; }

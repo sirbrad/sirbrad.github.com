@@ -1,0 +1,38 @@
+/* Body
+   ========================================================================== */
+   
+.site-contain {
+	padding-top: 3em;
+	text-align: center;
+}
+
+
+/* Socials
+   ========================================================================== */
+   
+.socials a {
+	background-color: #fff;
+	display: block;
+	height:60px;
+	position: relative;
+	text-align: center;
+	width:60px;
+	
+	@include transition(background-color 0.3s ease);
+	@include radius(10em);
+}
+
+.twitter {
+
+	&:hover {
+		background-color:#33CCFF;
+	}
+	
+	&:before {
+		background-position: 0 0;
+		height:27px;
+		position: relative;
+		top:1em;
+		width:34px;
+	}
+}
