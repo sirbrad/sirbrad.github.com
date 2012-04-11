@@ -39,38 +39,3 @@
     <script data-main="Assets/Scripts/main" src="Assets/Scripts/Require.min.js"></script>
 </body>
 </html>
-=======
----
-layout: layout
-title: Bradley Few - front end developer
----
-
-
-
-{% for post in site.posts limit:1 %}
-
-<article class="post lead">
-	<header>
-		<h1 class="beta"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-		<p class="milli">{{ post.date | date: "%B %e, %Y" }}</p>
-	</header>
-	{{ post.content | truncatewords: 50 }}
-	<a class="btn" href="{{ post.url }}">Continue reading &raquo;</a>
-</article>
-		
-{% endfor %}
-
-
-<ol class="listing">
-    {% for post in site.posts %}
-        {% if forloop.index > 1 %}
-            <li>
-                <header>
-                    <h1 class="beta"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-                    <p class="milli">{{ post.date | date: "%B %e, %Y" }}</p>
-                </header>
-            </li>
-    	{% endif %}
-    {% endfor %}
-</ol>
->>>>>>> 3831bbbc98675b2fabcf3968562d3d3c10eee4ff
