@@ -20,3 +20,12 @@
 	-o-transition:$transition;
 	transition:$transition;
 }
+
+// Transform
+@mixin tranform ($transform) {
+	-webkit-transform:$transform;
+	-moz-transform:$transform;
+	-ms-transform:$transform;
+	-o-transform:$transform;
+	transform:$transform;
+}

@@ -220,18 +220,63 @@ p, blockquote, ul, ol, dl, menu, pre {
   -moz-border-radius: 20em;
   border-radius: 20em; }
 
+/* Animation
+   ========================================================================== */
+@-webkit-keyframes rollup {
+  0% {
+    -webkit-transform: translateY(2em);
+    opacity: 0; } }
+
+@-webkit-keyframes rollon {
+  0%,40% {
+    -webkit-transform: translateX(-20em) rotate(-180deg); } }
+
 /* Body
    ========================================================================== */
 .site-contain {
   padding-top: 3em;
-  text-align: center; }
+  text-align: center;
+  -webkit-animation: rollup 1000ms cubic-bezier(0.51, 0.01, 0.37, 0.98); }
+
+/* Header
+   ========================================================================== */
+.site-head {
+  margin-bottom: 2em; }
+
+.site__name {
+  margin-bottom: .2em; }
+
+.site__title {
+  margin: 0; }
+
+/* Footer
+   ========================================================================== */
+.site-foot p {
+  color: #ccc;
+  text-shadow: 0 -1px 0 white; }
+
+/* Avatar
+   ========================================================================== */
+.avatar {
+  background-color: #fff;
+  display: inline-block;
+  margin-bottom: .5em;
+  padding: .2em;
+  width: 40%;
+  -webkit-animation: rollon 1400ms cubic-bezier(0.51, 0.01, 0.37, 0.98); }
 
 /* Socials
    ========================================================================== */
+.socials {
+  width: 100%; }
+
+.socials li + li {
+  margin-left: -0.4em; }
+
 .socials a {
   background-color: #fff;
   border: 4px solid transparent;
-  display: block;
+  display: inline-block;
   height: 60px;
   position: relative;
   text-align: center;
@@ -243,7 +288,12 @@ p, blockquote, ul, ol, dl, menu, pre {
   transition: background-color 0.3s ease;
   -webkit-border-radius: 10em;
   -moz-border-radius: 10em;
-  border-radius: 10em; }
+  border-radius: 10em;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8); }
 
 .socials a:before {
   height: 27px; }
@@ -283,12 +333,3 @@ p, blockquote, ul, ol, dl, menu, pre {
   position: relative;
   top: 1em;
   width: 31px; }
-
-/* Avatar
-   ========================================================================== */
-.avatar {
-  background-color: #fff;
-  display: inline-block;
-  margin-bottom: 2em;
-  padding: .5em;
-  width: 60%; }
