@@ -1,0 +1,203 @@
+/* 480+
+   ========================================================================== */
+
+@media screen and (min-width: 480px) {
+
+
+	@-webkit-keyframes rollon {
+		0%,40% {
+			-webkit-transform: translateX(-34em) rotate(-180deg);
+		}
+	}
+	
+	
+	@-moz-keyframes rollon {
+		0%,40% {
+			-moz-transform: translateX(-34em) rotate(-180deg);
+		}
+	}
+
+	.avatar {
+		padding: .4em;
+	}
+	
+	.socials li + li {
+		margin-left: .5em;
+	}
+	
+	// Increase our icons.
+	.socials a {
+		@include transform(scale(1));
+	}
+	
+	
+	
+}
+
+/* 600+
+   ========================================================================== */
+
+@media screen and (min-width: 600px) {
+
+
+	@-webkit-keyframes rollon {
+		0%,40% {
+			-webkit-transform: translateX(-45em) rotate(-180deg);
+		}
+	}
+	
+	
+	@-moz-keyframes rollon {
+		0%,40% {
+			-moz-transform: translateX(-45em) rotate(-180deg);
+		}
+	}
+
+	html {
+		border-width:2em;
+	}
+
+	.site-head {
+		margin-bottom: 3em;
+	}
+
+	.avatar {
+		margin-bottom: 1em;
+	}
+	
+	.h1 {
+		font-size:3em;
+	}
+	
+	.h6 {
+		font-size: 1.4em;
+	}
+	
+	
+}
+
+/* 768+
+   ========================================================================== */
+
+@media screen and (min-width: 768px) {
+
+	.site-contain {
+		padding-top:8em;
+	}
+
+
+	@-webkit-keyframes rollon {
+		0%,40% {
+			-webkit-transform: translateX(-50em) rotate(-180deg);
+		}
+	}
+	
+	
+	@-moz-keyframes rollon {
+		0%,40% {
+			-moz-transform: translateX(-50em) rotate(-180deg);
+		}
+	}
+
+	.avatar {
+		padding: .5em;
+	}
+	
+	.socials li + li {
+		margin-left: 1.3em;
+	}
+	
+}
+
+/* 1024+
+   ========================================================================== */
+
+@media screen and (min-width: 1024px) {
+
+
+	@-webkit-keyframes rollon {
+		0%,40% {
+			-webkit-transform: translateX(-60em) rotate(-180deg);
+		}
+	}
+	
+	
+	@-moz-keyframes rollon {
+		0%,40% {
+			-moz-transform: translateX(-60em) rotate(-180deg);
+		}
+	}
+}
+
+/* 1400+
+   ========================================================================== */
+
+@media screen and (min-width: 1400px) {
+
+	.site-contain {
+		padding-top:10em;
+	}
+
+
+
+	@-webkit-keyframes rollon {
+		0%,40% {
+			-webkit-transform: translateX(-74em) rotate(-180deg);
+		}
+	}
+	
+	
+	@-moz-keyframes rollon {
+		0%,40% {
+			-moz-transform: translateX(-74em) rotate(-180deg);
+		}
+	}
+}
+
+/* 1986+
+   ========================================================================== */
+
+@media screen and (min-width: 1986px) {
+
+
+	@-webkit-keyframes rollon {
+		0%,40% {
+			-webkit-transform: translateX(-85em) rotate(-180deg);
+		}
+	}
+	
+	
+	@-moz-keyframes rollon {
+		0%,40% {
+			-moz-transform: translateX(-85em) rotate(-180deg);
+		}
+	}
+}
+
+/* 1986+
+   ========================================================================== */
+
+@media screen and (min-width: 2300px) {
+
+
+	@-webkit-keyframes rollon {
+		0%,40% {
+			-webkit-transform: translateX(-92em) rotate(-180deg);
+		}
+	}
+	
+	
+	@-moz-keyframes rollon {
+		0%,40% {
+			-moz-transform: translateX(-92em) rotate(-180deg);
+		}
+	}
+}
+
+@media screen and (min-width:2520px) {
+	
+	.humour {
+		display:block;
+	}
+	
+}

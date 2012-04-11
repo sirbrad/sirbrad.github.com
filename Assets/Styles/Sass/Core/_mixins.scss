@@ -22,7 +22,7 @@
 }
 
 // Transform
-@mixin tranform ($transform) {
+@mixin transform ($transform) {
 	-webkit-transform:$transform;
 	-moz-transform:$transform;
 	-ms-transform:$transform;
