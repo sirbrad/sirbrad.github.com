@@ -1,7 +1,12 @@
 /* Base
    ========================================================================== */
-article, aside, dialog, figure, footer, header, hgroup, menu, nav, section {
-  display: block; }
+article, aside,
+dialog, figure,
+footer, header,
+hgroup, menu,
+nav, section {
+  display: block;
+}
 
 html {
   border: 1em solid #fff;
@@ -17,29 +22,45 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   background-color: #eeeeee;
-  margin: 0; }
+  margin: 0;
+}
+
+::selection,
+::-moz-selection {
+  background: #fff;
+  color: #999;
+  text-shadow: none;
+}
 
 /* Links
    ========================================================================== */
 a {
   color: #105cb6;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /* Addresses outline displayed oddly in Chrome */
 a:focus {
-  outline: thin dotted; }
+  outline: thin dotted;
+}
 
 /* Improves readability when focused and also mouse hovered in all browsers */
-a:hover, a:active {
-  outline: 0; }
+a:hover,
+a:active {
+  outline: 0;
+}
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   color: #0a3870;
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 /*
  * 1. Allows images to undergo proportional down-scaling within a container
@@ -50,46 +71,63 @@ img {
   max-width: 100%;
   height: auto;
   border: 0;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 /* Lists
    ========================================================================== */
-ul, ol {
-  padding-left: 30px; }
+ul,
+ol {
+  padding-left: 30px;
+}
 
-ul ul, ol ol, ul ol, ol ul {
-  margin: 0; }
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin: 0;
+}
 
 dt {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 dd {
-  margin-left: 30px; }
+  margin-left: 30px;
+}
 
 /* Tables
    ========================================================================== */
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 .data-table {
-  margin: 1.4em 0; }
+  margin: 1.4em 0;
+}
 
 .data-table caption {
   padding: 0.5em 10px;
   text-align: left;
-  color: #777; }
+  color: #777;
+}
 
-.data-table th, .data-table td {
+.data-table th,
+.data-table td {
   padding: 0.5em 10px;
   border: 1px solid #ccc;
-  text-align: left; }
+  text-align: left;
+}
 
-.data-table tbody tr:nth-child(odd) th, .data-table tbody tr:nth-child(odd) td {
-  background: #f8f8f8; }
+.data-table tbody tr:nth-child(odd) th,
+.data-table tbody tr:nth-child(odd) td {
+  background: #f8f8f8;
+}
 
 .data-table--wide {
-  width: 100%; }
+  width: 100%;
+}
 
 /* Typography
    ========================================================================== */
@@ -100,93 +138,120 @@ table {
   font-style: normal;
   margin: 1em 0;
   line-height: 1.1;
-  color: #222222; }
+  color: #222222;
+}
 
 h6, .h6 {
   font-size: 0.875em;
-  color: #777; }
+  color: #777;
+}
 
 h5, .h5 {
-  font-size: 0.875em; }
+  font-size: 0.875em;
+}
 
 h4, .h4 {
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 h3, .h3 {
-  font-size: 1.25em; }
+  font-size: 1.25em;
+}
 
 h2, .h2 {
   margin: 1em 0 0.75em;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+}
 
 h1, .h1 {
   margin: 0 0 0.75em;
-  font-size: 2em; }
+  font-size: 2em;
+}
 
 .h1-l, .h1-xl {
   margin: 0 0 0.5em;
   font-size: 3.375em;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 .h1-xl {
   margin: 0 0 0.5em;
   font-size: 4.5em;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
-small, .txt-s {
-  font-size: 75%; }
+small,
+.txt-s {
+  font-size: 75%;
+}
 
 .txt-xl {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+}
 
 /*
  * Block-level margins
  */
 p, blockquote, ul, ol, dl, menu, pre {
-  margin: 0 0 1.4em; }
+  margin: 0 0 1.4em;
+}
 
 /* Clearfix
    ========================================================================== */
 /* ClearFix - Ref: nicolasgallagher.com/micro-clearfix-hack/ */
 .cf {
-  zoom: 1; }
+  zoom: 1;
+}
 
-.cf:before, .cf:after {
+.cf:before,
+.cf:after {
   content: "";
-  display: table; }
+  display: table;
+}
 
 .cf:after {
-  clear: both; }
+  clear: both;
+}
 
 /* Media object
    ========================================================================== */
 /* Media Block - Ref: www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/ */
 .media {
-  display: block; }
+  display: block;
+}
 
 .media .img {
   float: left;
-  margin-right: 10px; }
+  margin-right: 10px;
+}
 
 .media .body {
   overflow: hidden;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 /* Horizontal block
    ========================================================================== */
 /*Hoz Block (Horizontal) - Ref: http://csswizardry.com/2011/09/the-nav-abstraction/ */
 .hoz {
   list-style: none;
-  padding-left: 0; }
+  padding-left: 0;
+}
 
-.hoz, .hoz dd {
-  margin-left: 0; }
+.hoz,
+.hoz dd {
+  margin-left: 0;
+}
 
-.hoz li, .hoz dt, .hoz dd {
-  display: inline; }
+.hoz li,
+.hoz dt,
+.hoz dd {
+  display: inline;
+}
 
 .hoz a {
-  display: inline-block; }
+  display: inline-block;
+}
 
 /* Hidden
    ========================================================================== */
@@ -194,14 +259,16 @@ p, blockquote, ul, ol, dl, menu, pre {
 .hidden {
   text-indent: 100%;
   white-space: nowrap;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 /* Contain
    ========================================================================== */
 .contain {
   max-width: 58.75em;
   padding: 0 10px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 /* Contain
    ========================================================================== */
@@ -210,34 +277,44 @@ p, blockquote, ul, ol, dl, menu, pre {
   background-color: transparent;
   background-image: url(../Images/Css/Sprite.png);
   background-repeat: no-repeat;
-  display: inline-block; }
+  display: inline-block;
+}
 
 /* Circle
    ========================================================================== */
 .circle {
   -webkit-border-radius: 20em;
   -moz-border-radius: 20em;
-  border-radius: 20em; }
+  border-radius: 20em;
+}
 
 /* Animation
    ========================================================================== */
 @-webkit-keyframes rollup {
   0% {
     -webkit-transform: translateY(2em);
-    opacity: 0; } }
+    opacity: 0;
+  }
+}
 
 @-moz-keyframes rollup {
   0% {
     -moz-transform: fslateY(2em);
-    opacity: 0; } }
+    opacity: 0;
+  }
+}
 
 @-webkit-keyframes rollon {
   0%,40% {
-    -webkit-transform: translateX(-20em) rotate(-180deg); } }
+    -webkit-transform: translateX(-20em) rotate(-180deg);
+  }
+}
 
 @-moz-keyframes rollon {
   0%,40% {
-    -moz-transform: translateX(-20em) rotate(-180deg); } }
+    -moz-transform: translateX(-20em) rotate(-180deg);
+  }
+}
 
 /* Body
    ========================================================================== */
@@ -245,26 +322,31 @@ p, blockquote, ul, ol, dl, menu, pre {
   padding-top: 3em;
   text-align: center;
   -webkit-animation: rollup 1000ms ease;
-  -moz-animation: rollup 1000ms ease; }
+  -moz-animation: rollup 1000ms ease;
+}
 
 /* Header
    ========================================================================== */
 .site-head {
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+}
 
 .site__name {
   margin-bottom: .2em;
-  text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.8); }
+  text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.8);
+}
 
 .site__title {
   margin: 0;
-  text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.8); }
+  text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.8);
+}
 
 /* Footer
    ========================================================================== */
 .site-foot p {
   color: #ccc;
-  text-shadow: 0 -1px 0 white; }
+  text-shadow: 0 -1px 0 white;
+}
 
 /* Avatar
    ========================================================================== */
@@ -275,15 +357,18 @@ p, blockquote, ul, ol, dl, menu, pre {
   padding: .2em;
   width: 40%;
   -webkit-animation: rollon 1400ms cubic-bezier(0.51, 0.01, 0.37, 0.98);
-  -moz-animation: rollon 1400ms cubic-bezier(0.51, 0.01, 0.37, 0.98); }
+  -moz-animation: rollon 1400ms cubic-bezier(0.51, 0.01, 0.37, 0.98);
+}
 
 /* Socials
    ========================================================================== */
 .socials {
-  width: 100%; }
+  width: 100%;
+}
 
 .socials li + li {
-  margin-left: -0.4em; }
+  margin-left: -0.4em;
+}
 
 .socials a {
   background-color: #fff;
@@ -305,46 +390,56 @@ p, blockquote, ul, ol, dl, menu, pre {
   -moz-transform: scale(0.8);
   -ms-transform: scale(0.8);
   -o-transform: scale(0.8);
-  transform: scale(0.8); }
+  transform: scale(0.8);
+}
 
 .socials a:before {
-  height: 27px; }
+  height: 27px;
+}
 
 .twitter:hover {
   background-color: #33CCFF;
-  border-color: #fff; }
+  border-color: #fff;
+}
 .twitter:before {
   background-position: 0 0;
   position: relative;
   top: 1em;
-  width: 31px; }
+  width: 31px;
+}
 
 .github:hover {
   background-color: #ccc;
-  border-color: #fff; }
+  border-color: #fff;
+}
 .github:before {
   background-position: -31px 0;
   position: relative;
   top: 1em;
-  width: 16px; }
+  width: 16px;
+}
 
 .dribbble:hover {
   background-color: #EA4C89;
-  border-color: #fff; }
+  border-color: #fff;
+}
 .dribbble:before {
   background-position: -47px 0;
   position: relative;
   top: 1em;
-  width: 27px; }
+  width: 27px;
+}
 
 .email:hover {
   background-color: #C53727;
-  border-color: #fff; }
+  border-color: #fff;
+}
 .email:before {
   background-position: -74px 0;
   position: relative;
   top: 1em;
-  width: 31px; }
+  width: 31px;
+}
 
 .humour {
   background-color: #fff;
@@ -356,7 +451,8 @@ p, blockquote, ul, ol, dl, menu, pre {
   padding: 1em;
   position: absolute;
   text-align: center;
-  width: 340px; }
+  width: 340px;
+}
 .humour:before {
   content: '';
   background-color: inherit;
@@ -374,118 +470,168 @@ p, blockquote, ul, ol, dl, menu, pre {
   transform: rotate(45deg);
   -webkit-border-radius: 0.3em;
   -moz-border-radius: 0.3em;
-  border-radius: 0.3em; }
+  border-radius: 0.3em;
+}
 
 /* 480+
    ========================================================================== */
 @media screen and (min-width: 480px) {
   @-webkit-keyframes rollon {
     0%,40% {
-      -webkit-transform: translateX(-34em) rotate(-180deg); } }
+      -webkit-transform: translateX(-34em) rotate(-180deg);
+    }
+}
 
   @-moz-keyframes rollon {
     0%,40% {
-      -moz-transform: translateX(-34em) rotate(-180deg); } }
+      -moz-transform: translateX(-34em) rotate(-180deg);
+    }
+}
 
   .avatar {
-    padding: .4em; }
+    padding: .4em;
+  }
 
   .socials li + li {
-    margin-left: .5em; }
+    margin-left: .5em;
+  }
 
   .socials a {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
-    transform: scale(1); } }
+    transform: scale(1);
+  }
+}
 /* 600+
    ========================================================================== */
 @media screen and (min-width: 600px) {
   @-webkit-keyframes rollon {
     0%,40% {
-      -webkit-transform: translateX(-45em) rotate(-180deg); } }
+      -webkit-transform: translateX(-45em) rotate(-180deg);
+    }
+}
 
   @-moz-keyframes rollon {
     0%,40% {
-      -moz-transform: translateX(-45em) rotate(-180deg); } }
+      -moz-transform: translateX(-45em) rotate(-180deg);
+    }
+}
 
   html {
-    border-width: 2em; }
+    border-width: 2em;
+  }
 
   .site-head {
-    margin-bottom: 3em; }
+    margin-bottom: 3em;
+  }
 
   .avatar {
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+  }
 
   .h1 {
-    font-size: 3em; }
+    font-size: 3em;
+  }
 
   .h6 {
-    font-size: 1.4em; } }
+    font-size: 1.4em;
+  }
+}
 /* 768+
    ========================================================================== */
 @media screen and (min-width: 768px) {
   .site-contain {
-    padding-top: 8em; }
+    padding-top: 8em;
+  }
 
   @-webkit-keyframes rollon {
     0%,40% {
-      -webkit-transform: translateX(-50em) rotate(-180deg); } }
+      -webkit-transform: translateX(-50em) rotate(-180deg);
+    }
+}
 
   @-moz-keyframes rollon {
     0%,40% {
-      -moz-transform: translateX(-50em) rotate(-180deg); } }
+      -moz-transform: translateX(-50em) rotate(-180deg);
+    }
+}
 
   .avatar {
-    padding: .5em; }
+    padding: .5em;
+  }
 
   .socials li + li {
-    margin-left: 1.3em; } }
+    margin-left: 1.3em;
+  }
+}
 /* 1024+
    ========================================================================== */
 @media screen and (min-width: 1024px) {
   @-webkit-keyframes rollon {
     0%,40% {
-      -webkit-transform: translateX(-60em) rotate(-180deg); } }
+      -webkit-transform: translateX(-60em) rotate(-180deg);
+    }
+}
 
   @-moz-keyframes rollon {
     0%,40% {
-      -moz-transform: translateX(-60em) rotate(-180deg); } } }
+      -moz-transform: translateX(-60em) rotate(-180deg);
+    }
+}
+}
 /* 1400+
    ========================================================================== */
 @media screen and (min-width: 1400px) {
   .site-contain {
-    padding-top: 10em; }
+    padding-top: 10em;
+  }
 
   @-webkit-keyframes rollon {
     0%,40% {
-      -webkit-transform: translateX(-74em) rotate(-180deg); } }
+      -webkit-transform: translateX(-74em) rotate(-180deg);
+    }
+}
 
   @-moz-keyframes rollon {
     0%,40% {
-      -moz-transform: translateX(-74em) rotate(-180deg); } } }
+      -moz-transform: translateX(-74em) rotate(-180deg);
+    }
+}
+}
 /* 1986+
    ========================================================================== */
 @media screen and (min-width: 1986px) {
   @-webkit-keyframes rollon {
     0%,40% {
-      -webkit-transform: translateX(-85em) rotate(-180deg); } }
+      -webkit-transform: translateX(-85em) rotate(-180deg);
+    }
+}
 
   @-moz-keyframes rollon {
     0%,40% {
-      -moz-transform: translateX(-85em) rotate(-180deg); } } }
+      -moz-transform: translateX(-85em) rotate(-180deg);
+    }
+}
+}
 /* 1986+
    ========================================================================== */
 @media screen and (min-width: 2300px) {
   @-webkit-keyframes rollon {
     0%,40% {
-      -webkit-transform: translateX(-92em) rotate(-180deg); } }
+      -webkit-transform: translateX(-92em) rotate(-180deg);
+    }
+}
 
   @-moz-keyframes rollon {
     0%,40% {
-      -moz-transform: translateX(-92em) rotate(-180deg); } } }
+      -moz-transform: translateX(-92em) rotate(-180deg);
+    }
+}
+}
 @media screen and (min-width:2520px) {
   .humour {
-    display: block; } }
+    display: block;
+  }
+}

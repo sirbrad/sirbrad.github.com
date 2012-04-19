@@ -29,6 +29,14 @@ body {
     margin: 0;
 }
 
+::selection,
+::-moz-selection {
+	background:#fff;
+	color:#999;
+	text-shadow: none;
+}
+
+
 /* Links
    ========================================================================== */
 
