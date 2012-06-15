@@ -1,5 +1,4 @@
-/* Base
-   ========================================================================== */
+// Base
  
 article, aside,
 dialog, figure,
@@ -10,32 +9,25 @@ nav, section {
 }
 
 html {
-	border:1em solid #fff;
 	font-family: $base-font-family;
     font-size: $base-font-size;
-    font-size-adjust:0.5;
-    font-weight:300;
-    font-style:normal;
     line-height: $base-line-height;
     color: $base-text-color;
-	min-height:100%;
+    overflow-y: scroll;
 	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;	
-	@include box-sizing(border-box);
+	-ms-text-size-adjust: 100%;
 }
 
 body {
-	background-color:$background-color;
+	background:$background-color;
     margin: 0;
 }
 
 ::selection,
 ::-moz-selection {
-	background:#fff;
-	color:#999;
+	background-color:$brand;
 	text-shadow: none;
 }
-
 
 /* Links
    ========================================================================== */
@@ -109,44 +101,14 @@ table {
     border-spacing: 0;
 }
 
-.data-table {
-    margin: $base-line-height + em 0;
-}
-
-.data-table caption {
-    padding: 0.5em 10px;
-    text-align: left;
-    color: #777;
-}
-
-.data-table th,
-.data-table td {
-    padding: 0.5em 10px;
-    border: 1px solid #ccc;
-    text-align: left;
-}
-
-.data-table tbody tr:nth-child(odd) th,
-.data-table tbody tr:nth-child(odd) td {
-    background: #f8f8f8;
-}
-
-.data-table--wide {
-    width: 100%;
-}
-
 
 /* Typography
    ========================================================================== */
 
-.hx { // TODO: update to use silent-but-extendable selectors when they land
-	font-family:"Museo 700", Verdana, serif;
-	font-size-adjust:0.51;
-	font-weight:700;
-	font-style:normal;
+.hx {
     margin: 1em 0;
     line-height: 1.1;
-    color: $important-text-color;
+    font-weight: bold;
 }
 
 h6, .h6 {

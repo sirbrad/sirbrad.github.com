@@ -1,6 +1,6 @@
 require.config({ 
 	paths: {
-		jquery: 'Utils/jquery'
+		jquery: '../Utils/jquery'
 	}
 });
 
