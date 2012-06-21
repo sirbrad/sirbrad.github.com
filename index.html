@@ -3,12 +3,20 @@ layout: default
 title: Bradley Few
 ---
 
+{% for post in site.posts %}
+	<article class="post post--listing">
+		<header>
+			<h1 class="h2 post__title"><a href="{{ post.url }}" title="Permanent link to: '{{ post.title }}'">{{ post.title }}</a></h1>
+		</header>
+	</article>
+{% endfor %}
 
-<h1>{{ page.title }}</h1>
+
+<!--<h1>{{ page.title }}</h1>
 
 {% for post in site.posts %}
 
     {{ post.date | date: "%B %e, %Y" }}
     <a href="{{ post.url }}">{{ post.title }}</a>
 
-{% endfor %}
+{% endfor %}-->

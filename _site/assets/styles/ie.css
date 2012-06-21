@@ -13,7 +13,7 @@ html {
   font-family: cambria, georgia, times, serif;
   font-size: 18px;
   line-height: 1.8;
-  color: #333333;
+  color: #444444;
   min-height: 100%;
   overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
@@ -27,7 +27,7 @@ body {
 
 ::selection,
 ::-moz-selection {
-  background-color: #006199;
+  background-color: #88adc9;
   text-shadow: none;
 }
 
@@ -39,7 +39,7 @@ body {
 /* Links
    ========================================================================== */
 a {
-  color: #006199;
+  color: #88adc9;
   text-decoration: none;
 }
 
@@ -57,7 +57,7 @@ a:active {
 a:hover,
 a:focus,
 a:active {
-  color: #00304d;
+  color: #5389b1;
   text-decoration: underline;
 }
 
@@ -264,8 +264,6 @@ p, blockquote, ul, ol, dl, menu, pre {
   margin: 0;
 }
 
-/* Component
-   ========================================================================== */
 /* Modules
    ========================================================================== */
 /* Call in the largest query for browsers that do not support media queries. */

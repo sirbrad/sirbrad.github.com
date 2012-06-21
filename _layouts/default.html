@@ -1,13 +1,29 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-
-        {{ content }}
-
-    </body>
+<!doctype html>
+<!--[if IE 8]><html class="no-js ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+	<title>{{ page.title }}</title>
+    <script src="/Assets/Scripts/Utils/modernizr.min.js"></script>
+    <meta name="author" content="sirBrad" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/plain" rel="author" href="humans.txt" />
+    <link rel="stylesheet" href="/Assets/Styles/index.css" media="(min-width:320px)" />
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    	<link rel="stylesheet" href="Assets/Styles/ie.css">
+    <![endif]-->
+</head>
+<body>	
+	<header class="site-head contain" role="banner">
+		<h1 class="h2 site-title"><strong>Bradley Few</strong><small><br>Developer</small></h1>
+	</header>
+	<div class="site-body contain">
+		{{ content }}
+	</div>
+	<footer style="text-align:center;">
+		<p>With love by @bradleyfew</p>
+	</footer>
+    <script data-main="/Assets/Scripts/App/main" src="/Assets/Scripts/Require.min.js"></script>
+</body>
 </html>

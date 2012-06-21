@@ -1,4 +1,26 @@
-<h1>Guide to using SASS</h1>
+<!doctype html>
+<!--[if IE 8]><html class="no-js ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+	<title>Guide to using SASS</title>
+    <script src="/Assets/Scripts/Utils/modernizr.min.js"></script>
+    <meta name="author" content="sirBrad" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/plain" rel="author" href="humans.txt" />
+    <link rel="stylesheet" href="/Assets/Styles/index.css" media="(min-width:320px)" />
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    	<link rel="stylesheet" href="Assets/Styles/ie.css">
+    <![endif]-->
+</head>
+<body>	
+	<header class="site-head contain" role="banner">
+		<h1 class="h2 site-title"><strong>Bradley Few</strong><small><br>Developer</small></h1>
+	</header>
+	<div class="site-body contain">
+		<section class="post">
+	<h1>Guide to using SASS</h1>
 
 <p>Note: for working examples see <a href="https://github.com/Integralist/Guide-to-using-SASS">https://github.com/Integralist/Guide-to-using-SASS</a></p>
 
@@ -92,82 +114,12 @@ $double_width: $width * 2;
 
 <p>These are very useful. A lot of times you have for example 'hover' effects that need a colour that is similar in shade to the main brand colour. Normally you have to open up a colour palette and randomly pick something, whereas the following functions help with that process:</p>
 
-<p><code>lighten(colour, percentage)</code></p>
-
-<p>```css
-.txt-light {</p>
-
-<pre><code>color: lighten($brand_color, 30%);
+<div class="highlight"><pre><code class="ruby"><span class="k">def</span> <span class="nf">foo</span>
+  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="k">end</span>
 </code></pre>
+</div>
 
-<p>}
-```</p>
-
-<p><code>darken(colour, percentage)</code></p>
-
-<p>```css
-.txt-dark {</p>
-
-<pre><code>color: darken($brand_color, 10%);
-</code></pre>
-
-<p>}
-```</p>
-
-<p><code>saturate(colour, percentage)</code></p>
-
-<p>```css
-.txt-sat {</p>
-
-<pre><code>color: saturate($brand_color, 100%);
-</code></pre>
-
-<p>}
-```</p>
-
-<p><code>desaturate(colour, percentage)</code></p>
-
-<p>```css
-.txt-desat {</p>
-
-<pre><code>color: desaturate($brand_color, 20%);
-</code></pre>
-
-<p>}
-```</p>
-
-<p><code>adjust-hue(colour, degrees)</code></p>
-
-<p>```css
-.txt-hue {</p>
-
-<pre><code>color: adjust-hue($brand_color, 180);
-</code></pre>
-
-<p>}
-```</p>
-
-<p><code>grayscale(colour)</code></p>
-
-<p>```css
-.txt-greyscale {</p>
-
-<pre><code>color: grayscale($brand_color);
-</code></pre>
-
-<p>}
-```</p>
-
-<p><code>mix(colour, colour)</code></p>
-
-<p>```css
-.txt-mix {</p>
-
-<pre><code>color: mix($brand_color, #C00);
-</code></pre>
-
-<p>}
-```</p>
 
 <h3>Importing</h3>
 
@@ -412,3 +364,14 @@ $prefixes:-webkit,-moz,-ms,-o;</p>
 <p>```</p>
 
 <p>…most of the time mixins will help you work around CSS3 vendor prefixes but in the above instance <code>interpolation</code> is the way forward.</p>
+
+</section>
+
+
+	</div>
+	<footer style="text-align:center;">
+		<p>With love by @bradleyfew</p>
+	</footer>
+    <script data-main="/Assets/Scripts/App/main" src="/Assets/Scripts/Require.min.js"></script>
+</body>
+</html>

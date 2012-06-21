@@ -22,29 +22,17 @@
 }
 
 .post {
-	padding:1em;
+	padding: 1.5em;
+	word-wrap: break-word;
+}
+
+.post--listing .post__title {
+	margin: 0;
 }
 
 .post pre {
+	background-color: rgba(245, 245, 245, 1);
+	padding: 1em;
 	overflow: auto;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width:768px) {
-
-.post {
-	padding:4em;
-}
-
+	word-wrap: normal; // Stop break-word
 }

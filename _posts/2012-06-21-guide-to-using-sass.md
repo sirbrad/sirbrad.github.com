@@ -1,3 +1,8 @@
+---
+layout: post
+title: Guide to using SASS
+date: 2012-06-21
+---
 #Guide to using SASS
 
 Note: for working examples see [https://github.com/Integralist/Guide-to-using-SASS](https://github.com/Integralist/Guide-to-using-SASS)
@@ -86,61 +91,12 @@ You can do calculations inline (i.e. where the property value is set) and you ca
 
 These are very useful. A lot of times you have for example 'hover' effects that need a colour that is similar in shade to the main brand colour. Normally you have to open up a colour palette and randomly pick something, whereas the following functions help with that process:
 
-`lighten(colour, percentage)`
-	
-```css
-.txt-light {
-	color: lighten($brand_color, 30%);
-}
-```
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
 
-`darken(colour, percentage)`
-
-```css
-.txt-dark {
-	color: darken($brand_color, 10%);
-}
-```
-
-`saturate(colour, percentage)`
-
-```css
-.txt-sat {
-	color: saturate($brand_color, 100%);
-}
-```
-
-`desaturate(colour, percentage)`
-
-```css
-.txt-desat {
-	color: desaturate($brand_color, 20%);
-}
-```
-
-`adjust-hue(colour, degrees)`
-
-```css
-.txt-hue {
-	color: adjust-hue($brand_color, 180);
-}
-```
-
-`grayscale(colour)`
-
-```css
-.txt-greyscale {
-	color: grayscale($brand_color);
-}
-```
-
-`mix(colour, colour)`
-
-```css
-.txt-mix {
-	color: mix($brand_color, #C00);
-}
-```
+{% endhighlight %}
 
 ###Importing
 
