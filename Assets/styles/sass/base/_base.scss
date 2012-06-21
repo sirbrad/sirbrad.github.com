@@ -9,10 +9,13 @@ nav, section {
 }
 
 html {
+	@include box-sizing(border-box);
+	//border:1em solid #fff;
 	font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
     color: $base-text-color;
+    min-height: 100%;
     overflow-y: scroll;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
@@ -27,6 +30,11 @@ body {
 ::-moz-selection {
 	background-color:$brand;
 	text-shadow: none;
+}
+
+.typekit-badge {
+	bottom:1em !important;
+	right:1em !important;
 }
 
 /* Links

@@ -1,0 +1,50 @@
+/* Article
+   ========================================================================== */
+
+.post {
+	background-color: #fff;
+	
+	&:nth-child(2) {
+		background-color: rgba(245, 245, 245, 1);
+	}
+	
+	&:nth-child(3) {
+		background-color: rgba(235, 235, 235, 1);
+	}
+	
+	&:nth-child(4) {
+		background-color: rgba(215, 215, 215, 1);
+	}
+	
+	&:nth-child(5) {
+		background-color: rgba(200, 200, 200, 1);
+	}
+}
+
+.post {
+	padding:1em;
+}
+
+.post pre {
+	overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:768px) {
+
+.post {
+	padding:4em;
+}
+
+}

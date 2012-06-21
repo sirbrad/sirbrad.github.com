@@ -7,17 +7,21 @@ nav, section {
 }
 
 html {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
-  color: #6d6e71;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: cambria, georgia, times, serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333333;
+  min-height: 100%;
   overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
 body {
-  background: #cccccc;
+  background: #88adc9;
   margin: 0;
 }
 
@@ -25,6 +29,11 @@ body {
 ::-moz-selection {
   background-color: #006199;
   text-shadow: none;
+}
+
+.typekit-badge {
+  bottom: 1em !important;
+  right: 1em !important;
 }
 
 /* Links
@@ -153,7 +162,7 @@ small,
  * Block-level margins
  */
 p, blockquote, ul, ol, dl, menu, pre {
-  margin: 0 0 1.4em;
+  margin: 0 0 1.8em;
 }
 
 /* Clearfix
@@ -226,7 +235,6 @@ p, blockquote, ul, ol, dl, menu, pre {
    ========================================================================== */
 .contain {
   max-width: 940px;
-  padding: 0 10px;
   margin: 0 auto;
 }
 
