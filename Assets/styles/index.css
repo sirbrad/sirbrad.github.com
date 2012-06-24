@@ -11,7 +11,7 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: cambria, georgia, times, serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.8;
   color: #444444;
   min-height: 100%;
@@ -28,6 +28,7 @@ body {
 ::selection,
 ::-moz-selection {
   background-color: #88adc9;
+  color: #fff;
   text-shadow: none;
 }
 
@@ -168,17 +169,18 @@ p, blockquote, ul, ol, dl, menu, pre {
 /* Clearfix
    ========================================================================== */
 /* ClearFix - Ref: nicolasgallagher.com/micro-clearfix-hack/ */
-.cf {
+.cf, .site-nav {
   zoom: 1;
 }
 
-.cf:before,
-.cf:after {
+.cf:before, .site-nav:before,
+.cf:after,
+.site-nav:after {
   content: "";
   display: table;
 }
 
-.cf:after {
+.cf:after, .site-nav:after {
   clear: both;
 }
 
@@ -194,7 +196,7 @@ p, blockquote, ul, ol, dl, menu, pre {
   margin-right: 10px;
 }
 
-.media .body {
+.media .bod {
   overflow: hidden;
   margin-bottom: 0;
 }
@@ -234,7 +236,7 @@ p, blockquote, ul, ol, dl, menu, pre {
 /* Contain
    ========================================================================== */
 .contain {
-  max-width: 940px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -581,19 +583,68 @@ p, blockquote, ul, ol, dl, menu, pre {
 /* Header
    ========================================================================== */
 .site-head {
-  padding: 1em 0;
+  padding: 1em 0 0;
 }
 
 .site-title {
-  color: rgba(0, 0, 0, 0.5);
   font-weight: normal;
   margin: 0;
+}
+
+.site-title a {
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: letter-spacing 0.1s ease;
+  -moz-transition: letter-spacing 0.1s ease;
+  -ms-transition: letter-spacing 0.1s ease;
+  -o-transition: letter-spacing 0.1s ease;
+  transition: letter-spacing 0.1s ease;
+}
+.site-title a:hover, .site-title a:focus {
+  text-decoration: none;
+  letter-spacing: .1em;
+}
+
+.site-img {
+  margin: 0 1em 1em;
+  width: 56px;
+}
+
+.site-nav {
+  clear: left;
+}
+
+.nav__item {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  float: left;
+  font-size: 1.125em;
+  font-weight: bold;
+  padding: 1em 0;
+  text-align: center;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.nav__item + .nav__item {
+  border-left: 1px solid #eee;
+}
+.nav__item.is-current {
+  text-decoration: underline;
 }
 
 /* Body
    ========================================================================== */
 .site-body {
   margin-bottom: 2em;
+}
+
+/* Footer
+   ========================================================================== */
+.site-foot {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.875em;
+  text-align: center;
 }
 
 /* Article
@@ -615,7 +666,7 @@ p, blockquote, ul, ol, dl, menu, pre {
 }
 
 .post {
-  padding: 1.5em;
+  padding: 1em;
   word-wrap: break-word;
 }
 
@@ -630,16 +681,38 @@ p, blockquote, ul, ol, dl, menu, pre {
   word-wrap: normal;
 }
 
+.post p:last-child {
+  margin-bottom: 0;
+}
+
+.post p code {
+  color: #e0bd44;
+}
+
+.post__date {
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 1.8em;
+  padding-right: 1em;
+}
+
 /* Modules
    ========================================================================== */
 @media (min-width:768px) {
-  /* Desktop
-     ========================================================================== */
+  /* 768px
+  ========================================================================== */
   .post {
     padding: 4em;
   }
 
   .post--listing .post__title {
     font-size: 2em;
+  }
+}
+@media (min-width:800px) {
+  /* 800px
+  ========================================================================== */
+  .site-img {
+    margin-left: 0;
   }
 }

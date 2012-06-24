@@ -3,7 +3,6 @@ layout: post
 title: Building a game with HTML5 Canvas
 date: 2012-04-05
 ---
-#Building a game with HTML5 Canvas
 
 ##Introduction
 
@@ -12,6 +11,8 @@ I've been playing around with the [Canvas](https://developer.mozilla.org/en/HTML
 I've also played with the raw pixel data in images to apply filters and effect the colours of an image, which is interesting (although I have no actual use for that sort of manipulation at the present time).
 
 So I thought I would dive a little bit further into the Canvas element and use it for building a game (as that's what most people are using it for). Nothing fancy, just the classic "sliding image puzzle" game we have all played at some point.  If you've never played this game: the idea is to take an image and to split it into pieces. You then jumble up the pieces and remove one piece so there is an empty space. You then have to re-assemble the original image by sliding the pieces around but only able to move one piece at a time via the empty space that is available to you.
+
+Lorem ipsum dolor sit amet, consectetur adip`*`isicing elit, sed do eiusmod `*`tempor incididunt ut labore et dolore magna aliqua.
 
 The game works on both desktop and mobile devices (e.g. 'touch' based devices).
 

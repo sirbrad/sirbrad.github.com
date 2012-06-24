@@ -16,19 +16,30 @@
 </head>
 <body>	
 	<header class="site-head contain" role="banner">
-		<h1 class="h2 site-title"><strong>Bradley Few</strong><small><br>Developer</small></h1>
+		<div class="media">
+			<a href="/" class="site-img img" title="Bradleyfew.com"><img src="https://twimg0-a.akamaihd.net/profile_images/1885861083/image_reasonably_small.jpg" alt="" /></a>
+			<div class="bod">
+				<h1 class="h2 site-title"><a href="#" title="Bradleyfew.com"><strong>Bradley Few</strong><small><br>Developer</small></a></h1>
+			</div>
+		</div>		
+		<nav class="site-nav" role="navigation">
+			<a href="/" class="nav__item is-current" title="Blog">Blog</a>
+			<a href="/about.html" class="nav__item" title="About">About</a>
+		</nav>
 	</header>
 	<div class="site-body contain">
 		<section class="post">
+	<time class="post__date" datetime="2012-04-05" pubdate="">05 April 2012</time>
 	<h1>Building a game with HTML5 Canvas</h1>
-
-<h2>Introduction</h2>
+	<h2>Introduction</h2>
 
 <p>I've been playing around with the <a href="https://developer.mozilla.org/en/HTML/Canvas">Canvas</a> element for a little bit now, using it for more realistic features such as manipulating user uploaded images (using <a href="http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html">XHR2</a>). For example, within a custom Content Management System where the user controls the images that appear on their website we would normally let the server handle the manipulation of the uploaded image using an external library such as <a href="http://www.imagemagick.org/">ImageMagick</a>, but now we handle this all on the client-side using Canvas.</p>
 
 <p>I've also played with the raw pixel data in images to apply filters and effect the colours of an image, which is interesting (although I have no actual use for that sort of manipulation at the present time).</p>
 
 <p>So I thought I would dive a little bit further into the Canvas element and use it for building a game (as that's what most people are using it for). Nothing fancy, just the classic "sliding image puzzle" game we have all played at some point.  If you've never played this game: the idea is to take an image and to split it into pieces. You then jumble up the pieces and remove one piece so there is an empty space. You then have to re-assemble the original image by sliding the pieces around but only able to move one piece at a time via the empty space that is available to you.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adip<code>*</code>isicing elit, sed do eiusmod <code>*</code>tempor incididunt ut labore et dolore magna aliqua.</p>
 
 <p>The game works on both desktop and mobile devices (e.g. 'touch' based devices).</p>
 
@@ -1182,11 +1193,11 @@ return complete;
 <p>But any questions then just let me know.</p>
 
 </section>
-
-
 	</div>
-	<footer style="text-align:center;">
-		<p>With love by @bradleyfew</p>
+	<footer class="site-foot">
+		<a href="https://twitter.com/bradleyfew" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @bradleyfew</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		<p class="push--top">&copy; 2012 Bradley Few.</p>
 	</footer>
     <script data-main="/Assets/Scripts/App/main" src="/Assets/Scripts/Require.min.js"></script>
 </body>
