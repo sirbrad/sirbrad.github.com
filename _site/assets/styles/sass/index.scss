@@ -11,6 +11,7 @@
 // Components
 @import "components/header";
 @import "components/body";
+@import "components/footer";
 @import "components/article";
 
 // Modules
@@ -18,5 +19,9 @@
 
 
 @media (min-width:768px) {
-	@import "components/desktop";
+	@import "components/768";
+}
+
+@media (min-width:800px) {
+	@import "components/800";
 }

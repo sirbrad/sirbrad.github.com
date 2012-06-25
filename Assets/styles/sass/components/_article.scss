@@ -22,7 +22,7 @@
 }
 
 .post {
-	padding: 1.5em;
+	padding: 1em;
 	word-wrap: break-word;
 }
 
@@ -35,4 +35,22 @@
 	padding: 1em;
 	overflow: auto;
 	word-wrap: normal; // Stop break-word
+}
+
+.post p {
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.post p code {
+	color: #e0bd44;
+}
+
+.post__date {
+	display: inline-block;
+	border-bottom: 1px solid #ccc;
+	margin: 0 0 $base-line-height + em;
+	padding-right: 1em;
 }
