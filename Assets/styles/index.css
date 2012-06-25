@@ -605,7 +605,7 @@ p, blockquote, ul, ol, dl, menu, pre {
 }
 
 .site-img {
-  margin: 0 1em 0;
+  margin: 0 1em;
   width: 56px;
 }
 
@@ -663,6 +663,20 @@ p, blockquote, ul, ol, dl, menu, pre {
    ========================================================================== */
 .site-body {
   margin-bottom: 2em;
+}
+
+.is-twitter {
+  color: #0084B4;
+}
+.is-twitter:hover, .is-twitter:focus {
+  color: #005f81;
+}
+
+.is-github {
+  color: #ccc;
+}
+.is-github:hover, .is-github:focus {
+  color: #b3b3b3;
 }
 
 /* Footer
