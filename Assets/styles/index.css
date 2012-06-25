@@ -605,12 +605,13 @@ p, blockquote, ul, ol, dl, menu, pre {
 }
 
 .site-img {
-  margin: 0 1em 1em;
+  margin: 0 1em 0;
   width: 56px;
 }
 
 .site-nav {
   clear: left;
+  margin-top: 1em;
 }
 
 .nav__item {

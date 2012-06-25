@@ -22,12 +22,13 @@
 }
 
 .site-img {
-	margin: 0 1em 1em;
+	margin: 0 1em;
 	width: 56px;
 }
 
 .site-nav {
 	clear: left;
+	margin-top: 1em;
 	@extend .cf;
 }
 
