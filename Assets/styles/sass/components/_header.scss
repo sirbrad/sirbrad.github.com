@@ -38,15 +38,36 @@
 	font-size: font-sizing(18px);
 	font-weight: bold;
 	padding: 1em 0;
+	position: relative;
 	text-align: center;
 	width: 50%;
 	@include box-sizing(border-box);
+	@include transition(background-color 0.1s ease);
 	
 	& + .nav__item {
 		border-left: 1px solid #eee;
 	}
 	
+	&:hover,
+	&:focus {
+		background-color: #eee;
+	}
+	
 	&.is-current {
 		text-decoration: underline;
+		
+		&:before {
+			content: '';
+			background-color: $brand;
+			display: inline-block;
+			height:20px;
+			width:20px;
+			position: absolute;
+			top:-10px;
+			left: 50%;
+			margin-left: -10px;
+			
+			@include transform(rotate(45deg));
+		}
 	}
 }
