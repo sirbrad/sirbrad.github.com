@@ -621,17 +621,42 @@ p, blockquote, ul, ol, dl, menu, pre {
   font-size: 1.125em;
   font-weight: bold;
   padding: 1em 0;
+  position: relative;
   text-align: center;
   width: 50%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-transition: background-color 0.1s ease;
+  -moz-transition: background-color 0.1s ease;
+  -ms-transition: background-color 0.1s ease;
+  -o-transition: background-color 0.1s ease;
+  transition: background-color 0.1s ease;
 }
 .nav__item + .nav__item {
   border-left: 1px solid #eee;
 }
+.nav__item:hover, .nav__item:focus {
+  background-color: #eee;
+}
 .nav__item.is-current {
   text-decoration: underline;
+}
+.nav__item.is-current:before {
+  content: '';
+  background-color: #88adc9;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /* Body
