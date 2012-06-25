@@ -70,7 +70,7 @@
 
 <p><code>sass --style extended --watch Assets/Styles/Sass/:Assets/Styles/</code></p>
 
-<p>‚Ä¶this basically says "watch the folder <code>Assets/Styles/Sass/</code> and compile any files into the parent folder <code>Assets/Styles</code>" - you'll notice that the colon character <code>:</code> is what helped make that happen.</p>
+<p>…this basically says "watch the folder <code>Assets/Styles/Sass/</code> and compile any files into the parent folder <code>Assets/Styles</code>" - you'll notice that the colon character <code>:</code> is what helped make that happen.</p>
 
 <h3>Comments</h3>
 
@@ -82,16 +82,14 @@
 
 <p>Variables are a great way to not have to repeat entering the same value over and over. The most common use case is the client's branding colours. Normally this colour will appear in lots of different areas of the site (links, hover effects etc) and if the colour does need to change slightly then you either do it by hand or you run a 'find and replace' function.</p>
 
-<p>To create a variable in SASS you simply prefix the name of the variable with a dollar sign: <code>$brand_color: #C00;</code> I can now use <code>$brand_color</code> wherever I like. For example‚Ä¶</p>
+<p>To create a variable in SASS you simply prefix the name of the variable with a dollar sign: <code>$brand_color: #C00;</code> I can now use <code>$brand_color</code> wherever I like. For example…</p>
 
-<p>```css
-.header {</p>
-
-<pre><code>color: $brand_color;
+<div class="highlight"><pre><code class="css"><span class="nc">.header</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="err">$</span><span class="n">brand_color</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
-<p>}
-```</p>
 
 <p>This makes life a lot easier and although I've seen people claim that OOCSS can work around this, it can, but not easily and so using SASS for this alone is still extremely useful in my mind.</p>
 
@@ -101,10 +99,11 @@
 
 <p>You can use all standard operators (*, /, +, -) for example:</p>
 
-<p><code>css
-$width: 10px;
-$double_width: $width * 2;
-</code></p>
+<div class="highlight"><pre><code class="css"><span class="err">$</span><span class="nt">width</span><span class="o">:</span> <span class="nt">10px</span><span class="o">;</span> 
+<span class="err">$</span><span class="nt">double_width</span><span class="o">:</span> <span class="err">$</span><span class="nt">width</span> <span class="o">*</span> <span class="nt">2</span><span class="o">;</span>
+</code></pre>
+</div>
+
 
 <p>You can do calculations inline (i.e. where the property value is set) and you can also group calculations:</p>
 
@@ -114,9 +113,65 @@ $double_width: $width * 2;
 
 <p>These are very useful. A lot of times you have for example 'hover' effects that need a colour that is similar in shade to the main brand colour. Normally you have to open up a colour palette and randomly pick something, whereas the following functions help with that process:</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="k">def</span> <span class="nf">foo</span>
-  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
-<span class="k">end</span>
+<p><code>lighten(colour, percentage)</code></p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.txt-light</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="n">lighten</span><span class="p">(</span><span class="err">$</span><span class="n">brand_color</span><span class="o">,</span> <span class="m">30</span><span class="o">%</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+
+<p><code>darken(colour, percentage)</code></p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.txt-dark</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="n">darken</span><span class="p">(</span><span class="err">$</span><span class="n">brand_color</span><span class="o">,</span> <span class="m">10</span><span class="o">%</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+
+<p><code>saturate(colour, percentage)</code></p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.txt-sat</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="n">saturate</span><span class="p">(</span><span class="err">$</span><span class="n">brand_color</span><span class="o">,</span> <span class="m">100</span><span class="o">%</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+
+<p><code>desaturate(colour, percentage)</code></p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.txt-desat</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="n">desaturate</span><span class="p">(</span><span class="err">$</span><span class="n">brand_color</span><span class="o">,</span> <span class="m">20</span><span class="o">%</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+
+<p><code>adjust-hue(colour, degrees)</code></p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.txt-hue</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="n">adjust</span><span class="o">-</span><span class="n">hue</span><span class="p">(</span><span class="err">$</span><span class="n">brand_color</span><span class="o">,</span> <span class="m">180</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+
+<p><code>grayscale(colour)</code></p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.txt-greyscale</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="n">grayscale</span><span class="p">(</span><span class="err">$</span><span class="n">brand_color</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+
+<p><code>mix(colour, colour)</code></p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.txt-mix</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="k">mix</span><span class="p">(</span><span class="err">$</span><span class="n">brand_color</span><span class="o">,</span> <span class="m">#C00</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre>
 </div>
 
@@ -125,11 +180,11 @@ $double_width: $width * 2;
 
 <p>You can import other SASS files into your main stylesheet using <code>@import "other.scss"</code></p>
 
-<p>The biggest note of warning here is that if you import a SCSS file and that file generates a CSS file of its own then you wont be able to use variables that aren't imported or defined in the imported SCSS file. For example‚Ä¶</p>
+<p>The biggest note of warning here is that if you import a SCSS file and that file generates a CSS file of its own then you wont be able to use variables that aren't imported or defined in the imported SCSS file. For example…</p>
 
 <p>If you have the main stylesheet <code>structure.scss</code> and within that file you import another SCSS file called <code>colours.scss</code> - if <code>colours.scss</code> generates its own CSS file <code>colours.css</code> then the SASS file <code>colours.scss</code> cannot use any variables that are defined inside <code>structure.scss</code> (or which have been imported separately into <code>structure.scss</code>).</p>
 
-<p>‚Ä¶there is a work-around to this which is to make sure <code>colours.scss</code> doesn't generate a CSS file, and the way you do that is prefix the file name with an underscore <code>_colours.scss</code>. You can also still import it without specifying the underscore: <code>@import "colours.scss";</code></p>
+<p>…there is a work-around to this which is to make sure <code>colours.scss</code> doesn't generate a CSS file, and the way you do that is prefix the file name with an underscore <code>_colours.scss</code>. You can also still import it without specifying the underscore: <code>@import "colours.scss";</code></p>
 
 <p>To be honest, it's likely that any stylesheets you have deemed modular enough to be imported you'll want them not to generate their own CSS files (what would be the point if when compiled they are being imported into the main CSS file?)</p>
 
@@ -137,50 +192,41 @@ $double_width: $width * 2;
 
 <p>For example:</p>
 
-<p>```css
-$brand_color = #0000FF;
-.brand {</p>
-
-<pre><code>color: $brand_color; 
+<div class="highlight"><pre><code class="css"><span class="err">$</span><span class="nt">brand_color</span> <span class="o">=</span> <span class="nf">#0000FF</span><span class="o">;</span>
+<span class="nc">.brand</span> <span class="p">{</span> 
+    <span class="k">color</span><span class="o">:</span> <span class="err">$</span><span class="n">brand_color</span><span class="p">;</span> 
+<span class="p">}</span>
+<span class="o">//</span> <span class="nt">MORE</span> <span class="nt">STYLES</span>
+<span class="k">@import</span> <span class="s2">&quot;other.scss&quot;</span><span class="p">;</span>
 </code></pre>
+</div>
 
-<p>}
-// MORE STYLES
-@import "other.scss";
-```</p>
 
-<p>‚Ä¶generates the following CSS‚Ä¶</p>
+<p>…generates the following CSS…</p>
 
-<p>```css
-.brand {</p>
-
-<pre><code>color: blue; 
+<div class="highlight"><pre><code class="css"><span class="nc">.brand</span> <span class="p">{</span> 
+    <span class="k">color</span><span class="o">:</span> <span class="nb">blue</span><span class="p">;</span> 
+<span class="p">}</span>
+<span class="o">//</span> <span class="nt">MORE</span> <span class="nt">STYLES</span>
+<span class="nc">.brand</span> <span class="p">{</span> 
+    <span class="k">background-color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span> 
+<span class="p">}</span>
 </code></pre>
+</div>
 
-<p>}
-// MORE STYLES
-.brand {</p>
 
-<pre><code>background-color: red; 
+<p>…which obviously isn't as efficient or clean as…</p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.brand</span> <span class="p">{</span> 
+    <span class="k">color</span><span class="o">:</span> <span class="nb">blue</span><span class="p">;</span> 
+    <span class="k">background-color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span> 
+<span class="p">}</span>
+<span class="o">//</span> <span class="nt">MORE</span> <span class="nt">STYLES</span>
 </code></pre>
+</div>
 
-<p>}
-```</p>
 
-<p>‚Ä¶which obviously isn't as efficient or clean as‚Ä¶</p>
-
-<p>```css
-.brand {</p>
-
-<pre><code>color: blue; 
-background-color: red; 
-</code></pre>
-
-<p>}
-// MORE STYLES
-```</p>
-
-<p>‚Ä¶but that's the trade-off between SASS features and the efficiency of the produced code.</p>
+<p>…but that's the trade-off between SASS features and the efficiency of the produced code.</p>
 
 <p>Note: you can import a normal CSS file (as you would in standard CSS) but it'll be pushed to the top of the compiled CSS file. This is because in standard CSS an imported stylesheet is only allowed to be imported from the top of the file.</p>
 
@@ -194,42 +240,32 @@ background-color: red;
 
 <p>Anywhere you have a CSS class you can re-import that inside another rule:</p>
 
-<p>```css
-.myClass {</p>
+<div class="highlight"><pre><code class="css"><span class="nc">.myClass</span> <span class="p">{</span>
+    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#969</span><span class="p">;</span>
+    <span class="k">color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span>
+<span class="p">}</span>
 
-<pre><code>border: 1px solid #969;
-color: red;
+<span class="nt">button</span> <span class="p">{</span>
+    <span class="o">@</span><span class="n">extend</span> <span class="o">.</span><span class="n">myClass</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="nb">orange</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
-<p>}</p>
 
-<p>button {</p>
+<p>…which generates the following CSS…</p>
 
-<pre><code>@extend .myClass;
-background-color: orange;
+<div class="highlight"><pre><code class="css"><span class="nc">.myClass</span><span class="o">,</span> <span class="nt">button</span> <span class="p">{</span>
+    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#969</span><span class="p">;</span>
+    <span class="k">color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">button</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="nb">orange</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
-<p>}
-```</p>
-
-<p>‚Ä¶which generates the following CSS‚Ä¶</p>
-
-<p>```css
-.myClass, button {</p>
-
-<pre><code>border: 1px solid #969;
-color: red;
-</code></pre>
-
-<p>}</p>
-
-<p>button {</p>
-
-<pre><code>background-color: orange;
-</code></pre>
-
-<p>}
-```</p>
 
 <p>A couple of last words of caution: <code>extend</code> avoids code duplication but it also causes other problems in that the amount of selectors can become an issue. If you @extend the same base class multiple times you may end up with a rule that has thousands of selectors, which isn't good for performance and can even make the browser crash (limit its use if you must use it).</p>
 
@@ -243,127 +279,100 @@ color: red;
 
 <p>You create a mixing like so:</p>
 
-<p>```css
-@mixin .myMixin {</p>
-
-<pre><code>color: blue; 
+<div class="highlight"><pre><code class="css"><span class="k">@mixin</span> <span class="nc">.myMixin</span> <span class="p">{</span> 
+    <span class="nt">color</span><span class="o">:</span> <span class="nt">blue</span><span class="o">;</span> 
+<span class="p">}</span>
+<span class="nc">.product_title</span> <span class="p">{</span>
+    <span class="o">@</span><span class="n">include</span> <span class="o">.</span><span class="n">myMixin</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
-<p>}
-.product_title {</p>
 
-<pre><code>@include .myMixin;
+<p>…and you can change the values like so…</p>
+
+<div class="highlight"><pre><code class="css"><span class="k">@mixin</span> <span class="nc">.myMixin</span><span class="o">(</span><span class="err">$</span><span class="nt">set_colour</span><span class="o">)</span> <span class="p">{</span> 
+    <span class="nt">color</span><span class="o">:</span> <span class="err">$</span><span class="nt">set_colour</span><span class="o">;</span> 
+<span class="p">}</span>
+<span class="nc">.product_title</span> <span class="p">{</span>
+    <span class="o">@</span><span class="n">include</span> <span class="o">.</span><span class="n">myMixin</span><span class="p">(</span><span class="m">#FF0000</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
-<p>}
-```</p>
 
-<p>‚Ä¶and you can change the values like so‚Ä¶</p>
+<p>…you can also define a default value if none is provided…</p>
 
-<p>```css
-@mixin .myMixin($set_colour) {</p>
-
-<pre><code>color: $set_colour; 
+<div class="highlight"><pre><code class="css"><span class="k">@mixin</span> <span class="nc">.myMixin</span><span class="o">(</span><span class="err">$</span><span class="nt">set_colour</span><span class="o">:</span> <span class="nf">#0000FF</span><span class="o">)</span> <span class="p">{</span> 
+    <span class="nt">color</span><span class="o">:</span> <span class="err">$</span><span class="nt">set_colour</span><span class="o">;</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
-<p>}
-.product_title {</p>
 
-<pre><code>@include .myMixin(#FF0000);
+<p>…you can use mixin's for things like CSS3 properties…</p>
+
+<div class="highlight"><pre><code class="css"><span class="k">@mixin</span> <span class="nt">rounded_borders</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">width</span><span class="o">:</span> <span class="nt">5px</span><span class="o">,</span> <span class="err">$</span><span class="nt">rounding</span><span class="o">:</span> <span class="nt">5px</span><span class="o">)</span> <span class="p">{</span> 
+    <span class="nt">-moz-border-radius</span><span class="o">:</span> <span class="err">$</span><span class="nt">rounding</span> <span class="err">$</span><span class="nt">rounding</span><span class="o">;</span> 
+    <span class="nt">-webkit-border-radius</span><span class="o">:</span> <span class="err">$</span><span class="nt">rounding</span> <span class="err">$</span><span class="nt">rounding</span><span class="o">;</span> 
+    <span class="nt">-khtml-border-radius</span><span class="o">:</span> <span class="err">$</span><span class="nt">rounding</span> <span class="err">$</span><span class="nt">rounding</span><span class="o">;</span> 
+    <span class="nt">-o-border-radius</span><span class="o">:</span> <span class="err">$</span><span class="nt">rounding</span> <span class="err">$</span><span class="nt">rounding</span><span class="o">;</span>
+        <span class="nt">border-radius</span><span class="o">:</span> <span class="err">$</span><span class="nt">rounding</span> <span class="err">$</span><span class="nt">rounding</span><span class="o">;</span>
+        <span class="nt">border</span><span class="o">:</span> <span class="err">$</span><span class="nt">width</span> <span class="nt">solid</span> <span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+<span class="p">}</span>
+
+<span class="k">@mixin</span> <span class="nt">opacity</span><span class="o">(</span><span class="err">$</span><span class="nt">opacity</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nt">filter</span><span class="o">:</span> <span class="nt">alpha</span><span class="o">(</span><span class="nt">opacity</span><span class="o">=</span><span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="k">opacity</span><span class="p">}</span><span class="o">);</span> <span class="o">//</span> <span class="nt">IE</span> <span class="nt">5-9</span><span class="o">+</span> 
+    <span class="nt">opacity</span><span class="o">:</span> <span class="err">$</span><span class="nt">opacity</span> <span class="o">*</span> <span class="nt">0</span><span class="nc">.01</span><span class="o">;</span> 
+<span class="p">}</span>
 </code></pre>
+</div>
 
-<p>}
-```</p>
 
-<p>‚Ä¶you can also define a default value if none is provided‚Ä¶</p>
+<p>…and use the opacity like so…</p>
 
-<p>```css
-@mixin .myMixin($set_colour: #0000FF) {</p>
-
-<pre><code>color: $set_colour;
+<div class="highlight"><pre><code class="css"><span class="nc">.h1</span> <span class="p">{</span> 
+    <span class="o">//</span> <span class="n">Use</span> <span class="n">the</span> <span class="n">IE</span> <span class="n">numbering</span> <span class="n">style</span> <span class="p">(</span><span class="n">instead</span> <span class="n">of</span> <span class="n">the</span> <span class="n">W3C</span><span class="err">&#39;s</span> <span class="m">0-1</span> <span class="n">numbering</span> <span class="n">style</span><span class="p">)</span>
+    <span class="o">@</span><span class="n">include</span> <span class="k">opacity</span><span class="p">(</span><span class="m">60</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
-<p>}
-```</p>
 
-<p>‚Ä¶you can use mixin's for things like CSS3 properties‚Ä¶</p>
+<p>…or you could use the reverse…</p>
 
-<p>```css
-@mixin rounded_borders($color, $width: 5px, $rounding: 5px) {</p>
-
-<pre><code>-moz-border-radius: $rounding $rounding; 
--webkit-border-radius: $rounding $rounding; 
--khtml-border-radius: $rounding $rounding; 
--o-border-radius: $rounding $rounding;
-    border-radius: $rounding $rounding;
-    border: $width solid $color;
+<div class="highlight"><pre><code class="css"><span class="k">@mixin</span> <span class="nt">opacity</span><span class="o">(</span><span class="err">$</span><span class="nt">opacity</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nt">filter</span><span class="o">:</span> <span class="nt">alpha</span><span class="o">(</span><span class="nt">opacity</span><span class="o">=</span><span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="k">opacity</span><span class="o">*</span><span class="m">100</span><span class="p">}</span><span class="o">);</span> <span class="o">//</span> <span class="nt">IE</span> <span class="nt">5-9</span><span class="o">+</span> 
+    <span class="nt">opacity</span><span class="o">:</span> <span class="err">$</span><span class="nt">opacity</span><span class="o">;</span> 
+<span class="p">}</span>
 </code></pre>
+</div>
 
-<p>}</p>
-
-<p>@mixin opacity($opacity) {</p>
-
-<pre><code>filter: alpha(opacity=#{$opacity}); // IE 5-9+ 
-opacity: $opacity * 0.01; 
-</code></pre>
-
-<p>}
-```</p>
-
-<p>‚Ä¶and use the opacity like so‚Ä¶</p>
-
-<p>```css
-.h1 {</p>
-
-<pre><code>// Use the IE numbering style (instead of the W3C's 0-1 numbering style)
-@include opacity(60);
-</code></pre>
-
-<p>}
-```</p>
-
-<p>‚Ä¶or you could use the reverse‚Ä¶</p>
-
-<p>```css
-@mixin opacity($opacity) {</p>
-
-<pre><code>filter: alpha(opacity=#{$opacity*100}); // IE 5-9+ 
-opacity: $opacity; 
-</code></pre>
-
-<p>}
-```</p>
 
 <h3>Interpolation</h3>
 
 <p>One area where mixins can't help you is when there is some specific CSS3 syntax such as <code>background-image</code> (with gradients). This is because not only the value changes but the syntax itself is different for each browser.</p>
 
-<p>One way to work around this issue is to use <code>interpolation</code>. The way it works is that you wrap a variable name with <code>#{}</code> e.g. <code>#{$my_variable}</code> and that will dynamically insert the value at that place in your CSS. Might sound a bit confusing so best to demonstrate this with an example, and the best example I can think of is again the <code>background-image</code> property with multiple different vendor prefixes‚Ä¶</p>
+<p>One way to work around this issue is to use <code>interpolation</code>. The way it works is that you wrap a variable name with <code>#{}</code> e.g. <code>#{$my_variable}</code> and that will dynamically insert the value at that place in your CSS. Might sound a bit confusing so best to demonstrate this with an example, and the best example I can think of is again the <code>background-image</code> property with multiple different vendor prefixes…</p>
 
-<p>```css
-// Variable
-$prefixes:-webkit,-moz,-ms,-o;</p>
+<div class="highlight"><pre><code class="css"><span class="o">//</span> <span class="nt">Variable</span>
+<span class="err">$</span><span class="nt">prefixes</span><span class="nd">:-webkit</span><span class="o">,</span><span class="nt">-moz</span><span class="o">,</span><span class="nt">-ms</span><span class="o">,</span><span class="nt">-o</span><span class="o">;</span>
 
-<p>// Loop over each item in the $prefixes variable
-// using interpolation to insert the relevant value dynamically
-@each $prefix in $prefixes {</p>
+<span class="o">//</span> <span class="nt">Loop</span> <span class="nt">over</span> <span class="nt">each</span> <span class="nt">item</span> <span class="nt">in</span> <span class="nt">the</span> <span class="err">$</span><span class="nt">prefixes</span> <span class="nt">variable</span>
+<span class="o">//</span> <span class="nt">using</span> <span class="nt">interpolation</span> <span class="nt">to</span> <span class="nt">insert</span> <span class="nt">the</span> <span class="nt">relevant</span> <span class="nt">value</span> <span class="nt">dynamically</span>
+<span class="k">@each</span> <span class="err">$</span><span class="nt">prefix</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">prefixes</span> <span class="p">{</span>
+    <span class="nt">background-image</span><span class="o">:</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="n">prefix</span><span class="p">}</span><span class="nt">-linear-gradient</span><span class="o">(</span><span class="nt">rgba</span><span class="o">(</span><span class="nt">255</span><span class="o">,</span><span class="nt">255</span><span class="o">,</span><span class="nt">255</span><span class="o">,</span><span class="nt">0</span><span class="o">),</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span><span class="nt">0</span><span class="o">,</span><span class="nt">0</span><span class="o">,</span><span class="nt">0</span><span class="nc">.1</span><span class="o">));</span>
+<span class="p">}</span>
 
-<pre><code>background-image: #{$prefix}-linear-gradient(rgba(255,255,255,0), rgba(0,0,0,0.1));
+<span class="o">//</span> <span class="nt">The</span> <span class="nt">following</span> <span class="nt">example</span> <span class="nt">might</span> <span class="nt">be</span> <span class="nt">better</span> <span class="nt">placed</span> <span class="nt">inside</span> <span class="nt">a</span> <span class="nt">mixin</span> <span class="nt">or</span> <span class="nt">extend</span>
+<span class="k">@each</span> <span class="err">$</span><span class="nt">prefix</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">prefixes</span> <span class="p">{</span>
+    <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="n">prefix</span><span class="p">}</span><span class="nt">-border-radius</span><span class="o">:</span> <span class="nt">10px</span><span class="o">;</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
-<p>}</p>
 
-<p>// The following example might be better placed inside a mixin or extend
-@each $prefix in $prefixes {</p>
-
-<pre><code>#{$prefix}-border-radius: 10px;
-</code></pre>
-
-<p>}</p>
-
-<p>```</p>
-
-<p>‚Ä¶most of the time mixins will help you work around CSS3 vendor prefixes but in the above instance <code>interpolation</code> is the way forward.</p>
+<p>…most of the time mixins will help you work around CSS3 vendor prefixes but in the above instance <code>interpolation</code> is the way forward.</p>
 
 </section>
 
