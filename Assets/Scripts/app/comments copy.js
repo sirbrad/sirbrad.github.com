@@ -24,6 +24,9 @@ define(['require', 'jquery', 'async!https://api.github.com/repos/sirbrad/sirbrad
 		var data = results.data,
 			comment;
 		
+		
+			console.log(Date.prototype)
+		
 		for (var i = 0; i < data.length; i++) {
 		
 		
@@ -44,6 +47,21 @@ define(['require', 'jquery', 'async!https://api.github.com/repos/sirbrad/sirbrad
 		container.appendChild(commentListing);
 		
 	})
+	
+	// so im setting this dynamically..
+	//$('.js-form').attr('action', 'https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments');
+	
+	
+	
+	$('.js-form').delegate('input[type=submit]', 'click', function(e){
+		//$.post('https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments', { body: this.find('textarea')[0].value } );
+		//console.log(this)
+		
+		alert(this.find('textarea')[0].value)
+		
+		e.preventDefault();
+		
+	});
 	
 
 })

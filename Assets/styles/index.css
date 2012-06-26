@@ -193,7 +193,7 @@ p, blockquote, ul, ol, dl, menu, pre {
 
 .media .img {
   float: left;
-  margin-right: 10px;
+  margin-right: 1em;
 }
 
 .media .bod {
@@ -746,6 +746,37 @@ p, blockquote, ul, ol, dl, menu, pre {
 .comment__listing {
   list-style: none;
   padding: 0;
+}
+
+.comment__item + .comment__item {
+  margin-top: 2em;
+}
+
+.comment__item .bod {
+  background-color: #fff;
+  padding: 2em;
+}
+
+.comment__item .img {
+  position: relative;
+  max-height: 120px;
+}
+.comment__item .img:before {
+  content: '';
+  display: inline-block;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #fff;
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: -1em;
+  top: 50%;
+  margin-top: -5px;
+}
+
+.comment__item p:last-child {
+  margin-bottom: 0;
 }
 
 /* Modules

@@ -192,7 +192,7 @@ p, blockquote, ul, ol, dl, menu, pre {
 
 .media .img {
   float: left;
-  margin-right: 10px;
+  margin-right: 1em;
 }
 
 .media .bod {

@@ -24,48 +24,26 @@ define(['require', 'jquery', 'async!https://api.github.com/repos/sirbrad/sirbrad
 		var data = results.data,
 			comment;
 		
+		for (var i = 0; i < data.length; i++) {
 		
-		$.each(data, function(i){
 		
 			comment = tpl({
 				useravatar: data[i].user.avatar_url,
 				username: data[i].user.login,
-				url: data[i].user.url,
+				url: data[i].user.url.split('users/')[1],
 				content: data[i].body,
 				date: data[i].created_at,
 				commenturl: data[i].url
 			});
 			
-		commentListing.innerHTML += comment;
+			commentListing.innerHTML += comment;
 			
-		})
+		}
 		
 		
 		container.appendChild(commentListing);
 		
 	})
-	
-	// so im setting this dynamically..
-	//$('.js-form').attr('action', 'https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments');
-	
-	
-	
-	$('.js-form').delegate('input[type=submit]', 'click', function(e){
-		
-		// hey ash. I need to somehow set an api methods to values from the form.
-		// You got any idea how i can do that?
-		
-		//$.post('https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments', { body: this.find('textarea')[0].value } );
-		
-		//console.log(this.find('textarea')[0].value)
-		
-		//console.log(this)
-		
-		alert(this.find('textarea')[0].value)
-		
-		e.preventDefault();
-		
-	});
 	
 
 })
