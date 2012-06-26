@@ -7,7 +7,6 @@ define(['require', 'jquery', 'async!https://api.github.com/repos/sirbrad/sirbrad
 		
 	// Add ol attributes
 	commentListing.className = 'comment__listing';
-		
 	
 	
 	// Locate our repo with same title and store id
@@ -22,7 +21,8 @@ define(['require', 'jquery', 'async!https://api.github.com/repos/sirbrad/sirbrad
 	
 	require(['async!https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments', 'tpl!../templates/comments.tpl'], function(results, tpl){
 	
-		var data = results.data;
+		var data = results.data,
+			comment;
 		
 		
 		$.each(data, function(i){
@@ -36,50 +36,36 @@ define(['require', 'jquery', 'async!https://api.github.com/repos/sirbrad/sirbrad
 				commenturl: data[i].url
 			});
 			
-			$(comment).appendTo(commentListing);
-		
+		commentListing.innerHTML += comment;
+			
 		})
+		
 		
 		container.appendChild(commentListing);
 		
-		
-		console.log(container, commentListing);	
-		
 	})
 	
+	// so im setting this dynamically..
+	//$('.js-form').attr('action', 'https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments');
 	
 	
 	
-	
-	
-	
-	
-	/*require(['async!https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments', 'tpl!../templates/comments.tpl'], function(results, tpl){
-	
-	var data = results.data,
-		len = data.length,
-		comment = [];
+	$('.js-form').delegate('input[type=submit]', 'click', function(e){
 		
-		for (var i = 0; i < len; i++) {
-			
-			comment.push(tpl({
-				useravatar: data[i].user.avatar_url,
-				username: data[i].user.login,
-				url: data[i].user.url,
-				content: data[i].body,
-				date: data[i].created_at,
-				commenturl: data[i].url
-			}));
-			
-			
-			
-			//console.log(data[i].user.avatar_url)
-
+		// hey ash. I need to somehow set an api methods to values from the form.
+		// You got any idea how i can do that?
 		
-		}
+		//$.post('https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments', { body: this.find('textarea')[0].value } );
 		
+		//console.log(this.find('textarea')[0].value)
 		
+		//console.log(this)
 		
-	});*/
+		alert(this.find('textarea')[0].value)
+		
+		e.preventDefault();
+		
+	});
+	
 
 })
