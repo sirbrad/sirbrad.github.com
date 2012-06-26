@@ -23,6 +23,8 @@ define(['require', 'jquery', 'async!https://api.github.com/repos/sirbrad/sirbrad
 	
 		var data = results.data,
 			comment;
+			
+			//console.log(data[0])
 		
 		for (var i = 0; i < data.length; i++) {
 		

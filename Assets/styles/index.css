@@ -740,7 +740,7 @@ p, blockquote, ul, ol, dl, menu, pre {
    ========================================================================== */
 .comments {
   background-color: #f0f0f0;
-  padding: 4em;
+  padding: 1em;
 }
 
 .comment__listing {
@@ -754,25 +754,27 @@ p, blockquote, ul, ol, dl, menu, pre {
 
 .comment__item .bod {
   background-color: #fff;
-  padding: 2em;
+  padding: 1em;
 }
 
 .comment__item .img {
+  display: inline-block;
+  margin: 0 0 1em;
   position: relative;
-  max-height: 120px;
+  max-width: 30%;
 }
 .comment__item .img:before {
   content: '';
   display: inline-block;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-right: 10px solid #fff;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
   height: 0;
   width: 0;
   position: absolute;
-  right: -1em;
-  top: 50%;
-  margin-top: -5px;
+  bottom: -1em;
+  right: 50%;
+  margin-right: -10px;
 }
 
 .comment__item p:last-child {
@@ -784,12 +786,31 @@ p, blockquote, ul, ol, dl, menu, pre {
 @media (min-width:768px) {
   /* 768px
   ========================================================================== */
-  .post {
+  .post,
+  .comments {
     padding: 4em;
   }
 
   .post--listing .post__title {
     font-size: 2em;
+  }
+
+  .comment__item .img {
+    float: left;
+    margin: 0 1em 0 0;
+  }
+  .comment__item .img:before {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #fff;
+    right: -1em;
+    bottom: 50%;
+    margin: 0 0 -10px;
+  }
+
+  .comment__item .bod {
+    padding: 2em;
+    overflow: hidden;
   }
 }
 @media (min-width:800px) {

@@ -4,7 +4,7 @@
 .comments {
 	//background-color: rgba(0, 0, 0, .3); nice blue
 	background-color: rgba(240, 240, 240, 1);
-	padding: 4em;
+	padding: 1em;
 }
 
 .comment__listing {
@@ -21,30 +21,28 @@
 
 .comment__item .bod {
 	background-color: #fff;
-	padding: 2em;
+	padding: 1em;
 }
 
 .comment__item .img {
+	display: inline-block;
+	margin: 0 0 1em;
 	position: relative;
-	max-height: 120px;
+	max-width: 30%;
 	
 	&:before {
 		content: '';
 		display: inline-block;
-		border-top: 10px solid transparent;
-		border-bottom: 10px solid transparent;
-		border-right: 10px solid #fff;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid #fff;
 		height: 0;
 		width: 0;
 		position: absolute;
-		right: -1em;
-		top: 50%;
-		margin-top: -5px;
+		bottom: -1em;
+		right: 50%;
+		margin-right: -10px;
 	}
-}
-
-.comment__avatar {
-	// maybe remove?
 }
 
 .comment__item p {
