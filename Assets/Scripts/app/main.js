@@ -6,4 +6,4 @@ require.config({
 	}
 });
 
-//require(['comments']);
+require(['comments']);

@@ -1,8 +1,16 @@
 /* Article
    ========================================================================== */
 
-.post {
+.island {
 	background-color: #fff;
+}
+
+.island {
+	padding: 1em;
+	word-wrap: break-word;
+}
+
+.post {
 	
 	&:nth-child(2) {
 		background-color: rgba(245, 245, 245, 1);
@@ -19,11 +27,6 @@
 	&:nth-child(5) {
 		background-color: rgba(200, 200, 200, 1);
 	}
-}
-
-.post {
-	padding: 1em;
-	word-wrap: break-word;
 }
 
 .post--listing .post__title {

@@ -4,7 +4,7 @@ define(['require', 'jquery', 'async!https://api.github.com/repos/sirbrad/sirbrad
 		issueId,
 		commentListing = document.createElement('ol'),
 		container = document.getElementsByClassName('js-comments')[0];
-		
+	
 	// Add ol attributes
 	commentListing.className = 'comment__listing';
 	
@@ -23,9 +23,8 @@ define(['require', 'jquery', 'async!https://api.github.com/repos/sirbrad/sirbrad
 	
 		var data = results.data,
 			comment;
-		
-		
-			console.log(Date.prototype)
+			
+			//console.log(data[0])
 		
 		for (var i = 0; i < data.length; i++) {
 		
@@ -48,20 +47,8 @@ define(['require', 'jquery', 'async!https://api.github.com/repos/sirbrad/sirbrad
 		
 	})
 	
-	// so im setting this dynamically..
-	//$('.js-form').attr('action', 'https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments');
 	
-	
-	
-	$('.js-form').delegate('input[type=submit]', 'click', function(e){
-		//$.post('https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments', { body: this.find('textarea')[0].value } );
-		//console.log(this)
-		
-		alert(this.find('textarea')[0].value)
-		
-		e.preventDefault();
-		
-	});
+	console.log(Date(1995,11,17))
 	
 
 })
