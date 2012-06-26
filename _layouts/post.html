@@ -1,8 +1,13 @@
 ---
 layout: default
 ---
-<section class="post">
-	<time class="post__date" datetime="{{ page.date | date: "%Y-%m-%d"  }}" pubdate="">{{ page.date | date_to_long_string }}</time>
-	<h1>{{ page.title }}</h1>
+<article class="post">
+	<header>		
+		<time class="post__date" datetime="{{ page.date | date: "%Y-%m-%d"  }}" pubdate="">{{ page.date | date_to_long_string }}</time>
+		<h1>{{ page.title }}</h1>
+	</header>
 	{{ content }}
-</section>
+</article>
+<aside class="comments js-comments">
+	<h1>Get involved.</h1>
+</aside>

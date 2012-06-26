@@ -1,0 +1,85 @@
+define(['require', 'jquery', 'async!https://api.github.com/repos/sirbrad/sirbrad.github.com/issues'], function(require, $, issues){
+
+	var documentTitle = document.title,
+		issueId,
+		commentListing = document.createElement('ol'),
+		container = document.getElementsByClassName('js-comments')[0];
+		
+	// Add ol attributes
+	commentListing.className = 'comment__listing';
+		
+	
+	
+	// Locate our repo with same title and store id
+	for (var i = 0; i < issues.data.length; i++) {
+		
+		if (issues.data[i].title === documentTitle) {
+		
+				issueId = issues.data[i].number;
+			}
+	}
+	
+	
+	require(['async!https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments', 'tpl!../templates/comments.tpl'], function(results, tpl){
+	
+		var data = results.data;
+		
+		
+		$.each(data, function(i){
+		
+			comment = tpl({
+				useravatar: data[i].user.avatar_url,
+				username: data[i].user.login,
+				url: data[i].user.url,
+				content: data[i].body,
+				date: data[i].created_at,
+				commenturl: data[i].url
+			});
+			
+			$(comment).appendTo(commentListing);
+		
+		})
+		
+		container.appendChild(commentListing);
+		
+		
+		console.log(container, commentListing);	
+		
+	})
+	
+	
+	
+	
+	
+	
+	
+	
+	/*require(['async!https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments', 'tpl!../templates/comments.tpl'], function(results, tpl){
+	
+	var data = results.data,
+		len = data.length,
+		comment = [];
+		
+		for (var i = 0; i < len; i++) {
+			
+			comment.push(tpl({
+				useravatar: data[i].user.avatar_url,
+				username: data[i].user.login,
+				url: data[i].user.url,
+				content: data[i].body,
+				date: data[i].created_at,
+				commenturl: data[i].url
+			}));
+			
+			
+			
+			//console.log(data[i].user.avatar_url)
+
+		
+		}
+		
+		
+		
+	});*/
+
+})

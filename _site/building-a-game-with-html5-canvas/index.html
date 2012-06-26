@@ -28,9 +28,11 @@
 		</nav>
 	</header>
 	<div class="site-body contain">
-		<section class="post">
-	<time class="post__date" datetime="2012-04-05" pubdate="">05 April 2012</time>
-	<h1>Building a game with HTML5 Canvas</h1>
+		<article class="post">
+	<header>		
+		<time class="post__date" datetime="2012-04-05" pubdate="">05 April 2012</time>
+		<h1>Building a game with HTML5 Canvas</h1>
+	</header>
 	<h2>Introduction</h2>
 
 <p>I've been playing around with the <a href="https://developer.mozilla.org/en/HTML/Canvas">Canvas</a> element for a little bit now, using it for more realistic features such as manipulating user uploaded images (using <a href="http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html">XHR2</a>). For example, within a custom Content Management System where the user controls the images that appear on their website we would normally let the server handle the manipulation of the uploaded image using an external library such as <a href="http://www.imagemagick.org/">ImageMagick</a>, but now we handle this all on the client-side using Canvas.</p>
@@ -1192,11 +1194,15 @@ return complete;
 
 <p>But any questions then just let me know.</p>
 
-</section>
+</article>
+<aside class="comments js-comments">
+	<h1>Get involved.</h1>
+</aside>
+
 	</div>
 	<footer class="site-foot">
-		<a href="https://twitter.com/bradleyfew" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @bradleyfew</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		<!--<a href="https://twitter.com/bradleyfew" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @bradleyfew</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>-->
 		<p class="push--top">&copy; 2012 Bradley Few.</p>
 	</footer>
     <script data-main="/Assets/Scripts/App/main" src="/Assets/Scripts/Require.min.js"></script>

@@ -736,6 +736,18 @@ p, blockquote, ul, ol, dl, menu, pre {
   padding-right: 1em;
 }
 
+/* Comments
+   ========================================================================== */
+.comments {
+  background-color: #f0f0f0;
+  padding: 4em;
+}
+
+.comment__listing {
+  list-style: none;
+  padding: 0;
+}
+
 /* Modules
    ========================================================================== */
 @media (min-width:768px) {
