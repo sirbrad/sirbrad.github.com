@@ -1,0 +1,59 @@
+/* Article
+   ========================================================================== */
+
+.island {
+	background-color: #fff;
+}
+
+.island {
+	padding: 1em;
+	word-wrap: break-word;
+}
+
+.post {
+	
+	&:nth-child(2) {
+		background-color: rgba(245, 245, 245, 1);
+	}
+	
+	&:nth-child(3) {
+		background-color: rgba(235, 235, 235, 1);
+	}
+	
+	&:nth-child(4) {
+		background-color: rgba(215, 215, 215, 1);
+	}
+	
+	&:nth-child(5) {
+		background-color: rgba(200, 200, 200, 1);
+	}
+}
+
+.post--listing .post__title {
+	margin: 0;
+}
+
+.post pre {
+	background-color: rgba(245, 245, 245, 1);
+	padding: 1em;
+	overflow: auto;
+	word-wrap: normal; // Stop break-word
+}
+
+.post p {
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.post p code {
+	color: #e0bd44;
+}
+
+.post__date {
+	display: inline-block;
+	border-bottom: 1px solid #ccc;
+	margin: 0 0 $base-line-height + em;
+	padding-right: 1em;
+}
