@@ -6,14 +6,19 @@
 @import "base/functions";
 @import "base/base";
 @import "base/helpers";
+@import "base/syntax";
 
 // Components
+@import "components/header";
+@import "components/body";
+@import "components/footer";
+@import "components/article";
+@import "components/comments";
 
-// Modules
-@import "modules/module";
-
-
-/* Call in the largest query for browsers that do not support media queries. */
 @media (min-width:768px) {
-	//780 files an so on.
+	@import "components/768";
+}
+
+@media (min-width:800px) {
+	@import "components/800";
 }
