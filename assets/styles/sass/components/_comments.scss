@@ -46,13 +46,6 @@
 	}
 }
 
-.comment__item p {
-	
-	&:last-child {
-		margin-bottom: 0;
-	}
-}
-
 .comment__id {
 	text-transform: capitalize;
 	font-weight: bold;
@@ -63,4 +56,13 @@
 	font-size: font-sizing(14px);
 	margin-left: .5em;
 	font-style: italic;
+}
+
+
+// Generated conent
+.comment__item p {
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
 }

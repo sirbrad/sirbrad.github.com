@@ -715,7 +715,7 @@ p, blockquote, ul, ol, dl, menu, pre {
   margin: 0;
 }
 
-.post pre {
+pre {
   background-color: #f5f5f5;
   padding: 1em;
   overflow: auto;
@@ -726,7 +726,7 @@ p, blockquote, ul, ol, dl, menu, pre {
   margin-bottom: 0;
 }
 
-.post p code {
+code {
   color: #e0bd44;
 }
 
@@ -779,10 +779,6 @@ p, blockquote, ul, ol, dl, menu, pre {
   margin-right: -10px;
 }
 
-.comment__item p:last-child {
-  margin-bottom: 0;
-}
-
 .comment__id {
   text-transform: capitalize;
   font-weight: bold;
@@ -793,6 +789,10 @@ p, blockquote, ul, ol, dl, menu, pre {
   font-size: 0.875em;
   margin-left: .5em;
   font-style: italic;
+}
+
+.comment__item p:last-child {
+  margin-bottom: 0;
 }
 
 @media (min-width:768px) {
