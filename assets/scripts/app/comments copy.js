@@ -1,30 +1,26 @@
 define(['require', 'jquery', 'async!https://api.github.com/repos/sirbrad/sirbrad.github.com/issues'], function(require, $, issues){
-
-	var documentTitle = document.title,
-		issueId,
-		commentListing = document.createElement('ol'),
-		container = document.getElementsByClassName('js-comments')[0];
 	
+	var issueId = $('body').attr('data-issueID'),
+		commentListing = document.createElement('ol'),
+		container;
+	
+	
+	if ($('.js-comments').length) {
+		
+		container = $('.js-comments');
+	
+	} else {
+		return false
+	}
+		
 	// Add ol attributes
 	commentListing.className = 'comment__listing';
-	
-	
-	// Locate our repo with same title and store id
-	for (var i = 0; i < issues.data.length; i++) {
-		
-		if (issues.data[i].title === documentTitle) {
-		
-				issueId = issues.data[i].number;
-			}
-	}
 	
 	
 	require(['async!https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments', 'tpl!../templates/comments.tpl'], function(results, tpl){
 	
 		var data = results.data,
 			comment;
-			
-			//console.log(data[0])
 		
 		for (var i = 0; i < data.length; i++) {
 		
@@ -34,7 +30,7 @@ define(['require', 'jquery', 'async!https://api.github.com/repos/sirbrad/sirbrad
 				username: data[i].user.login,
 				url: data[i].user.url.split('users/')[1],
 				content: data[i].body,
-				date: data[i].created_at,
+				date: Date(data[i].created_at),
 				commenturl: data[i].url
 			});
 			
@@ -43,12 +39,9 @@ define(['require', 'jquery', 'async!https://api.github.com/repos/sirbrad/sirbrad
 		}
 		
 		
-		container.appendChild(commentListing);
+		container.append(commentListing);
 		
 	})
-	
-	
-	console.log(Date(1995,11,17))
 	
 
 })
