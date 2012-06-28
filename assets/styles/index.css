@@ -637,7 +637,7 @@ p, blockquote, ul, ol, dl, menu, pre {
   border-left: 1px solid #eee;
 }
 .nav__item:hover, .nav__item:focus {
-  background-color: #eee;
+  color: #ccc;
 }
 .nav__item.is-current {
   text-decoration: underline;
