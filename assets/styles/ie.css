@@ -783,6 +783,18 @@ p, blockquote, ul, ol, dl, menu, pre {
   margin-bottom: 0;
 }
 
+.comment__id {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.comment__date {
+  display: inline-block;
+  font-size: 0.875em;
+  margin-left: .5em;
+  font-style: italic;
+}
+
 @media (min-width:768px) {
   /* 768px
   ========================================================================== */

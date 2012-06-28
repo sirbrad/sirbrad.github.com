@@ -8,6 +8,19 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 	// Add ol attributes
 	commentListing.className = 'comment__listing';
 	
+	// Format date
+	function formatDate(str) {
+	
+		var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+			newDate = new Date(str),
+			currentDay = newDate.getDate(),
+			currentMonth = newDate.getMonth(),
+			currentYear = newDate.getFullYear();
+			
+		return currentDay + ' ' + months[currentMonth] + ' ' + currentYear;
+		
+	}
+	
 	
 	function setup(data){
 	
@@ -18,10 +31,9 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 				username: data[i].user.login,
 				url: data[i].user.url.split('users/')[1],
 				content: data[i].body_html,
-				date: Date(data[i].created_at),
+				date: formatDate(data[i].created_at),
 				commenturl: data[i].url
 			});
-			
 			
 			commentListing.innerHTML += comment;
 		

@@ -52,3 +52,15 @@
 		margin-bottom: 0;
 	}
 }
+
+.comment__id {
+	text-transform: capitalize;
+	font-weight: bold;
+}
+
+.comment__date {
+	display: inline-block;
+	font-size: font-sizing(14px);
+	margin-left: .5em;
+	font-style: italic;
+}
