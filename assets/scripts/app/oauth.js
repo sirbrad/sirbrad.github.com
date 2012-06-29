@@ -4,15 +4,14 @@ define(['jquery'], function($){
 	
 	
 	
-	var authHost = 'https://github.com/login/oauth/authorize?client_id=' + clientID + '&scope=public_repo';
-	
+	var authHost = 'https://github.com/login/oauth/authorize?client_id=' + clientID + '&redirect_uri=' + window.location.href + '&scope=public_repo';	
 
 	
 	$('.js-post').click(function(e){
 	
-		var popup = open(authHost, 'popup');
+	
+		window.location.href = authHost;
 		
-		console.log(window.location)
 	
 	
 		e.preventDefault();
