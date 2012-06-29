@@ -53,5 +53,24 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 			setup(data);
 		}
 	});
+	
+	
+	
+	$('input[type=submit]').click(function(e){
+	
+		
+		var val = this.previousElementSibling.value;
+		
+		$.post('https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments', { body: val },
+	   		function(data) {
+	     	console.log("Data Loaded: " + data);
+	   	});
+		
+		
+		
+		e.preventDefault();
+	
+	});
+	
 
 })
