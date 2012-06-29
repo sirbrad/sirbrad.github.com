@@ -760,6 +760,7 @@ code {
 }
 
 .comment__item .img {
+  background-color: #fff;
   display: inline-block;
   margin: 0 0 1em;
   position: relative;
