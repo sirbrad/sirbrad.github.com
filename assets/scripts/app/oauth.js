@@ -1,8 +1,14 @@
 define(['jquery'], function($){
 
+
+	// Check to see if user is returning with
+	// a valid token
+	(function(){
+		var match = hash.match(/code=(\w+)/);
+          console.log(!!match && match[1]);
+	})
+
 	var clientID = '4e3a2ccec7c91a9eb26c';
-	
-	
 	
 	var authHost = 'https://github.com/login/oauth/authorize?client_id=' + clientID + '&redirect_uri=' + window.location.href + '&scope=public_repo';	
 
