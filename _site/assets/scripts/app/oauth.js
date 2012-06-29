@@ -15,25 +15,31 @@ define(['jquery'], function($){
 	// Also would like to use xhr instead of jquery ajax.
 
 	var token;
+	
+	
+	
+	function listen() {
+	
+		$('.js-post').click(function(e){
+			
+		
+			window.location.href = authHost;
+		
+		
+			e.preventDefault();
+		})
+		
+	}
 		
 	// Check to see if user is returning with
 	// a valid token
-	(window.location.href.split('code=').length > 1) ? token = window.location.href.split('code=')[2] : listen();
+	(window.location.href.split('code=').length > 1) ? token = window.location.href.split('code=')[1] : listen();
 	
-
 	var clientID = '4e3a2ccec7c91a9eb26c',
 		authHost = 'https://github.com/login/oauth/authorize?client_id=' + clientID + '&redirect_uri=' + window.location.href + '&scope=public_repo';	
 
 	
-	$('.js-post').click(function(e){
 	
-	
-		window.location.href = authHost;
-		
-	
-	
-		e.preventDefault();
-	})
 	
 
 	
