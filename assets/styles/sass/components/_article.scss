@@ -10,22 +10,11 @@
 	word-wrap: break-word;
 }
 
-.post {
-	
-	&:nth-child(2) {
-		background-color: rgba(245, 245, 245, 1);
-	}
-	
-	&:nth-child(3) {
-		background-color: rgba(235, 235, 235, 1);
-	}
-	
-	&:nth-child(4) {
-		background-color: rgba(215, 215, 215, 1);
-	}
-	
-	&:nth-child(5) {
-		background-color: rgba(200, 200, 200, 1);
+
+// Darken on iteration
+@for $i from 1 through 10 {
+	.post--id-#{$i} {
+			background-color: darken(#fff, 5 * $i);
 	}
 }
 

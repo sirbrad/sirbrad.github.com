@@ -698,17 +698,44 @@ p, blockquote, ul, ol, dl, menu, pre {
   word-wrap: break-word;
 }
 
-.post:nth-child(2) {
-  background-color: #f5f5f5;
+.post--id-1 {
+  background-color: #f2f2f2;
 }
-.post:nth-child(3) {
-  background-color: #ebebeb;
+
+.post--id-2 {
+  background-color: #e6e6e6;
 }
-.post:nth-child(4) {
-  background-color: #d7d7d7;
+
+.post--id-3 {
+  background-color: #d9d9d9;
 }
-.post:nth-child(5) {
-  background-color: #c8c8c8;
+
+.post--id-4 {
+  background-color: #cccccc;
+}
+
+.post--id-5 {
+  background-color: #bfbfbf;
+}
+
+.post--id-6 {
+  background-color: #b3b3b3;
+}
+
+.post--id-7 {
+  background-color: #a6a6a6;
+}
+
+.post--id-8 {
+  background-color: #999999;
+}
+
+.post--id-9 {
+  background-color: #8c8c8c;
+}
+
+.post--id-10 {
+  background-color: gray;
 }
 
 .post--listing .post__title {
