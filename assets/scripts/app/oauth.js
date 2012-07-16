@@ -39,12 +39,14 @@ define(['jquery'], function($){
 		var form = $('.js-form'),
 			textarea = form.find('textarea')[0];
 		
-		console.log(typeof textarea.value)
+		var comment = {
+				'body': 'static testing' 
+			};
 		
 		$.ajax({
 			url: 'https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments',
 			type: 'POST',
-			data: { 'body': 'static testing' },
+			data: JSON.stringify(comment),
 			headers: {
 				'Content-Type': 'application/json; charset=UTF-8'
 			},
