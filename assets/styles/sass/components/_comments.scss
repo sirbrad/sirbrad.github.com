@@ -31,6 +31,7 @@
 	margin: 0 0 1em;
 	position: relative;
 	max-width: 30%;
+	min-height: 80px; // avoid jump on load
 	
 	&:before {
 		content: '';
@@ -45,6 +46,16 @@
 		right: 50%;
 		margin-right: -10px;
 	}
+}
+
+@-webkit-keyframes hey {
+	from { -webkit-transform: scale(.8); }
+}
+
+.comment__avatar {
+	position: relative;
+	z-index: 2;
+	-webkit-animation: hey .4s ease-in;
 }
 
 .comment__id {
@@ -67,3 +78,44 @@
 		margin-bottom: 0;
 	}
 }
+
+
+
+// All applause to @dte
+@-webkit-keyframes spin {
+	to { -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes spin {
+	to { -moz-transform: rotate(360deg); }
+}
+
+.i--loader {
+	background-color: transparent;
+	border: 3px solid;
+	border-right-color: transparent;
+	color: #444;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -8px 0 0 -8px;
+	
+	@include radius(50%);
+	-webkit-animation: spin 1s infinite linear;
+	-moz-animation: spin 1s infinite linear;
+	
+	&:after {
+		content:'';
+		border: 4px solid transparent;
+		border-left-color: inherit;
+		display: block;
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: -50%;
+		right: -50%;
+	}
+}	
