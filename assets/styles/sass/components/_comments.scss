@@ -118,34 +118,65 @@
 
 .post-comment {
 	background-color: rgba(0, 0, 0, .3);
+	color: #fff;
 }
 
-.comment__input {
+.comment__hint {
+	display: block;
+	font-size: font-sizing(6px);
+	font-weight: normal;
+}
+
+.comment__hint a {
+	color: #eee;
+}
+
+.comment__input,
+.btn {
 	@include box-sizing(border-box);
-	background-color: rgba(240, 240, 240, 1);
 	border: none;
+	font-family: $base-font-family;
 	font-size: 1em;
-	padding: 2em;
 	width: 100%;
-	max-width: 100%;
 	
 	-webkit-appearance: none;
-	@include transition(background-color 0.1s ease);
+	@include radius(0);
 	
 	&:focus,
 	&:active {
-		background-color: #fff;
 		outline: none;
 	}
 }
 
+.comment__input {
+	background-color: #fff;
+	margin: 0 0 .6em;
+	padding: 1em;
+	max-width: 100%;
+	min-height: 12em;
+}
+
 .btn {
-	@include box-sizing(border-box);
-	background: #fff;
+	background-color: #ccc;
+	color: #fff;
+	cursor: pointer;
 	display: block;
+	font-size: 1em;
+	font-weight: bold;
 	padding: 1em 0;
 	text-align: center;
-	width: 100%;
+	
+	@include transition(background-color 0.1s ease);
+	
+	&:hover,
+	&:focus {
+		background-color: darken(#ccc, 5%);
+	}
+	
+	&:active {
+		position: relative;
+		top: 1px;
+	}
 }
 
 

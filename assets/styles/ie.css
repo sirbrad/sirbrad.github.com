@@ -873,39 +873,68 @@ code {
 
 .post-comment {
   background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
 }
 
-.comment__input {
+.comment__hint {
+  display: block;
+  font-size: 0.375em;
+  font-weight: normal;
+}
+
+.comment__hint a {
+  color: #eee;
+}
+
+.comment__input,
+.btn {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background-color: #f0f0f0;
   border: none;
+  font-family: cambria, georgia, times, serif;
   font-size: 1em;
-  padding: 2em;
   width: 100%;
-  max-width: 100%;
   -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.comment__input:focus, .comment__input:active,
+.btn:focus,
+.btn:active {
+  outline: none;
+}
+
+.comment__input {
+  background-color: #fff;
+  margin: 0 0 .6em;
+  padding: 1em;
+  max-width: 100%;
+  min-height: 12em;
+}
+
+.btn {
+  background-color: #ccc;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 1em 0;
+  text-align: center;
   -webkit-transition: background-color 0.1s ease;
   -moz-transition: background-color 0.1s ease;
   -ms-transition: background-color 0.1s ease;
   -o-transition: background-color 0.1s ease;
   transition: background-color 0.1s ease;
 }
-.comment__input:focus, .comment__input:active {
-  background-color: #fff;
-  outline: none;
+.btn:hover, .btn:focus {
+  background-color: #bfbfbf;
 }
-
-.btn {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: #fff;
-  display: block;
-  padding: 1em 0;
-  text-align: center;
-  width: 100%;
+.btn:active {
+  position: relative;
+  top: 1px;
 }
 
 @media (min-width:768px) {
@@ -935,6 +964,15 @@ code {
   .comment__item .bod {
     padding: 2em;
     overflow: hidden;
+  }
+
+  .comment__input {
+    margin-bottom: 1.6em;
+    padding: 2em;
+  }
+
+  .btn {
+    font-size: 1.25em;
   }
 }
 @media (min-width:800px) {
