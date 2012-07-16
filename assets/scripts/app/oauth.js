@@ -4,7 +4,8 @@ define(['jquery'], function($){
 
 	var clientID = '4e3a2ccec7c91a9eb26c',
 		btn = $('.js-post'),
-		token;
+		token,
+		issueId = $('body').attr('data-issueID');
 	
 	
 	// Set href for authorisation
@@ -27,8 +28,37 @@ define(['jquery'], function($){
 	
 		var pop = open('https://github.com/login/oauth/authorize?client_id=' + clientID + '&scope=public_repo,user&redirect_uri=' + location.origin + '/login.html', 'pop', 'width=1015,height=500');
 	
-	
+		
+		e.preventDefault();
+		
 	})
+	
+	
+	function addComment() {
+		
+		var form = $('.js-form'),
+			textarea = form.find('textarea')[0];
+		
+		console.log(typeof textarea.value)
+		
+		$.ajax({
+			url: 'https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments',
+			type: 'POST',
+			data: { 'body': textarea.value },
+			headers: {Accept: "application/vnd.github.full+json"},
+			success: function(data, status, jqXHR){
+			
+				
+				console.log(data, status, jqXHR);
+				
+			},
+			error: function(jqXHR, textStatus, errorThrown){
+				console.log(jqXHR, textStatus, errorThrown);
+			}
+		});
+		
+		
+	}
 	
 	//var url = 'https://github.com/login/oauth/access_token' + token + '?client_id=' + clientID + '&client_secret=' + secretID + '&code=' + token;
 	
@@ -56,8 +86,12 @@ define(['jquery'], function($){
 				$.ajax({
 					url: 'https://api.github.com/user?access_token=' + this.responseText,
 					type: 'GET',
-					success: function(data, textStatus, jqXHR){
-						console.log(data, textStatus, jqXHR);
+					success: function(data, status, jqXHR){
+						
+						if (status === 'success') {
+							addComment();
+						}
+						
 					},
 					error: function(jqXHR, textStatus, errorThrown){
 						console.log(jqXHR, textStatus, errorThrown);
