@@ -44,8 +44,10 @@ define(['jquery'], function($){
 		$.ajax({
 			url: 'https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueId + '/comments',
 			type: 'POST',
-			data: { 'body': textarea.value },
-			headers: {Accept: "application/vnd.github.full+json"},
+			data: { 'body': 'static testing' },
+			headers: {
+				'Content-Type': 'application/json; charset=UTF-8'
+			},
 			success: function(data, status, jqXHR){
 			
 				
