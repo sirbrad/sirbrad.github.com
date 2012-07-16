@@ -5,7 +5,7 @@
 $code = $_REQUEST['code'];
 
 $client_id = '4e3a2ccec7c91a9eb26c';
-$client_secret = '25a46f5d64f0493093bc9d2bff5dde87b7f00627';
+$client_secret = 'SECRET';
 
 if($code) {
 	$ch = curl_init('https://github.com/login/oauth/access_token');
@@ -30,6 +30,6 @@ if($code) {
 ?>
 <script>
 
-var window.token = <?= echo $token ?>;
+	var window.token = <?= echo $token ?>;
 	
 </script>

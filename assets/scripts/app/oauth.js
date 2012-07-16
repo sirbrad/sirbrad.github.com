@@ -30,14 +30,69 @@ define(['jquery'], function($){
 	
 	})
 	
+	//var url = 'https://github.com/login/oauth/access_token' + token + '?client_id=' + clientID + '&client_secret=' + secretID + '&code=' + token;
+	
 	
 	window.addEventListener('message', function (event) {
-	var code = event.data.split('&')[0];
+		var code = event.data.split('&')[0];
 	
-	console.log(code)
+	
+		
+			// Create the XHR object.
+		function createCORSRequest(method, url) {
+		  var xhr = new XMLHttpRequest();
+		  if ("withCredentials" in xhr) {
+		    // XHR for Chrome/Safari/Firefox.
+		    xhr.open(method, url, true);
+		  } else if (typeof XDomainRequest != "undefined") {
+		    // XDomainRequest for IE.
+		    xhr = new XDomainRequest();
+		    xhr.open(method, url);
+		  } else {
+		    // CORS not supported.
+		    xhr = null;
+		  }
+		  return xhr;
+		}
+		
+		
+		
+		// Make the actual CORS request.
+		function makeCorsRequest(url) {
+		
+		  var xhr = createCORSRequest('POST', url);
+		  if (!xhr) {
+		    alert('CORS not supported');
+		    return;
+		  }
+		  
+		  xhr.setRequestHeader('custom-header', 'value');
+		
+		  // Response handlers.
+		  xhr.onload = function() {
+		    var text = xhr.responseText;
+		    	console.log(xhr)
+		    alert('Response from CORS request to ' + url);
+		  };
+		
+		  xhr.onerror = function() {
+		    alert('Woops, there was an error making the request.');
+		  };
+		
+		  xhr.send();
+		}
+		
+		
+		makeCorsRequest('http://alanfewcompany.co.uk/oauth.php?code=' + code);
+		
+	
+	
+	
+	
+	
 
 	// Step 5
-	$.get('/oauth.php?code=' + code, function (access_token) {
+	/*$.get('http://alanfewcompany.co.uk/oauth.php?code=' + code, function (access_token) {
 		// Step 7
 		//$('#access_token').val(access_token);
 		
@@ -45,8 +100,8 @@ define(['jquery'], function($){
 
 		/*$.getJSON('https://api.github.com/user?access_token=' + access_token, function (user) {
 			$('#username').val(user.login);
-		});*/
-	});
+		});*
+	});*/
 });
 
 	
@@ -63,53 +118,7 @@ define(['jquery'], function($){
 	
 	
 	
-/*if (token) {
 
-	// Create the XHR object.
-function createCORSRequest(method, url) {
-  var xhr = new XMLHttpRequest();
-  if ("withCredentials" in xhr) {
-    // XHR for Chrome/Safari/Firefox.
-    xhr.open(method, url, true);
-  } else if (typeof XDomainRequest != "undefined") {
-    // XDomainRequest for IE.
-    xhr = new XDomainRequest();
-    xhr.open(method, url);
-  } else {
-    // CORS not supported.
-    xhr = null;
-  }
-  return xhr;
-}
-// Make the actual CORS request.
-function makeCorsRequest() {
-
-  var xhr = createCORSRequest('POST', url);
-  if (!xhr) {
-    alert('CORS not supported');
-    return;
-  }
-  
-  xhr.setRequestHeader('custom-header', 'value');
-
-  // Response handlers.
-  xhr.onload = function() {
-    var text = xhr.responseText;
-    	console.log(xhr)
-    alert('Response from CORS request to ' + url);
-  };
-
-  xhr.onerror = function() {
-    alert('Woops, there was an error making the request.');
-  };
-
-  xhr.send();
-}
-
-
-	makeCorsRequest();
-
-}*/
 	
 	
 	

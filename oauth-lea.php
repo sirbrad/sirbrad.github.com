@@ -30,6 +30,6 @@ if($code) {
 ?>
 <script>
 
-var window.token = <?= echo $token ?>;
+	var window.token = <?= echo $token ?>;
 	
 </script>
