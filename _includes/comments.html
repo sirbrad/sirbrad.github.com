@@ -1,8 +1,7 @@
 <aside class="island comments js-comments">
-	<h1>Get involved</h1>
-	<p><a href="https://github.com/sirbrad/sirbrad.github.com/issues/{{ page.issueID }}" target="_blank">Add a comment on Github</a>!</p></p>
+	<p class="h1">Get involved</p>
 </aside>
-<form method="post" class="js-form">
-	<textarea placeholder="add comment"></textarea>
-	<a href="#" class="js-post" style="color:#fff;">Button</a>
+<form class="island post-comment js-post-comment">
+	<textarea class="comment__input" placeholder="add comment"></textarea>
+	<a href="https://github.com/sirbrad/sirbrad.github.com/issues/{{ page.issueID }}" class="btn js-post" title="Post a comment to '{{ page.title }}'">Post comment</a>
 </form>

@@ -871,6 +871,43 @@ code {
   right: -50%;
 }
 
+.post-comment {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.comment__input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  border: none;
+  font-size: 1em;
+  padding: 2em;
+  width: 100%;
+  max-width: 100%;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 0.1s ease;
+  -moz-transition: background-color 0.1s ease;
+  -ms-transition: background-color 0.1s ease;
+  -o-transition: background-color 0.1s ease;
+  transition: background-color 0.1s ease;
+}
+.comment__input:focus, .comment__input:active {
+  background-color: #fff;
+  outline: none;
+}
+
+.btn {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fff;
+  display: block;
+  padding: 1em 0;
+  text-align: center;
+  width: 100%;
+}
+
 @media (min-width:768px) {
   /* 768px
   ========================================================================== */
