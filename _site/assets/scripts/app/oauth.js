@@ -37,8 +37,43 @@ define(['jquery'], function($){
 		var code = event.data.split('&')[0];
 	
 	
+	
+	
+	
+	
+	
+	
+		var xhr = new XMLHttpRequest();
 		
-			// Create the XHR object.
+		xhr.open('GET', 'http://alanfewcompany.co.uk/oauth.php?code=' + code);
+		
+		xhr.onreadystatechange = function () {
+			if (this.status == 200 && this.readyState == 4) {
+				
+				var accessToken = this.responseText;
+				
+				
+				$.ajax({
+					url: 'https://api.github.com/user?access_token=' + this.responseText,
+					type: 'GET',
+					success: function(data, textStatus, jqXHR){
+						console.log(data, textStatus, jqXHR);
+					},
+					error: function(jqXHR, textStatus, errorThrown){
+						console.log(jqXHR, textStatus, errorThrown);
+					}
+				});
+			}
+		};
+		
+		xhr.send();
+
+	
+	
+	
+	
+		
+		/*	// Create the XHR object.
 		function createCORSRequest(method, url) {
 		  var xhr = new XMLHttpRequest();
 		  if ("withCredentials" in xhr) {
@@ -83,7 +118,7 @@ define(['jquery'], function($){
 		}
 		
 		
-		makeCorsRequest('http://alanfewcompany.co.uk/oauth.php?code=' + code);
+		makeCorsRequest('http://alanfewcompany.co.uk/oauth.php?code=' + code);*/
 		
 	
 	
