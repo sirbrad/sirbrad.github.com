@@ -1,5 +1,154 @@
 define(['jquery'], function($){
 
+	var secretID = 'SECRET';
+
+	var clientID = '4e3a2ccec7c91a9eb26c',
+		btn = $('.js-post'),
+		token;
+	
+	
+	// Set href for authorisation
+	/*btn.attr('href', 'https://github.com/login/oauth/authorize?client_id=' + clientID + '&scope=public_repo,user&redirect_uri=' + location.href);
+	
+	// Check to see if user is returning with
+	// a valid token
+	(window.location.href.split('code=').length > 1) ? token = window.location.href.split('code=')[1].split('&')[0] : false;
+
+	//console.log(btn, location, token)
+	
+	
+	var url = 'https://github.com/login/oauth/access_token' + token + '?client_id=' + clientID + '&client_secret=' + secretID + '&code=' + token;	*/
+	
+	
+	
+	
+	btn.click(function(e){
+	
+	
+		var pop = open('https://github.com/login/oauth/authorize?client_id=' + clientID + '&scope=public_repo,user&redirect_uri=' + location.origin + '/login.html', 'pop', 'width=1015,height=500');
+	
+	
+	})
+	
+	//var url = 'https://github.com/login/oauth/access_token' + token + '?client_id=' + clientID + '&client_secret=' + secretID + '&code=' + token;
+	
+	
+	window.addEventListener('message', function (event) {
+		var code = event.data.split('&')[0];
+	
+	
+		
+			// Create the XHR object.
+		function createCORSRequest(method, url) {
+		  var xhr = new XMLHttpRequest();
+		  if ("withCredentials" in xhr) {
+		    // XHR for Chrome/Safari/Firefox.
+		    xhr.open(method, url, true);
+		  } else if (typeof XDomainRequest != "undefined") {
+		    // XDomainRequest for IE.
+		    xhr = new XDomainRequest();
+		    xhr.open(method, url);
+		  } else {
+		    // CORS not supported.
+		    xhr = null;
+		  }
+		  return xhr;
+		}
+		
+		
+		
+		// Make the actual CORS request.
+		function makeCorsRequest(url) {
+		
+		  var xhr = createCORSRequest('POST', url);
+		  if (!xhr) {
+		    alert('CORS not supported');
+		    return;
+		  }
+		  
+		  xhr.setRequestHeader('custom-header', 'value');
+		
+		  // Response handlers.
+		  xhr.onload = function() {
+		    var text = xhr.responseText;
+		    	console.log(xhr)
+		    alert('Response from CORS request to ' + url);
+		  };
+		
+		  xhr.onerror = function() {
+		    alert('Woops, there was an error making the request.');
+		  };
+		
+		  xhr.send();
+		}
+		
+		
+		makeCorsRequest('http://alanfewcompany.co.uk/oauth.php?code=' + code);
+		
+	
+	
+	
+	
+	
+
+	// Step 5
+	/*$.get('http://alanfewcompany.co.uk/oauth.php?code=' + code, function (access_token) {
+		// Step 7
+		//$('#access_token').val(access_token);
+		
+		console.log(access_token)
+
+		/*$.getJSON('https://api.github.com/user?access_token=' + access_token, function (user) {
+			$('#username').val(user.login);
+		});*
+	});*/
+});
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+
+
+	/*if (token) {
+	
+		$.ajax({
+			type: 'POST',
+			url: 'https://github.com/login/oauth/access_token' + token + '?client_id=' + clientID + '&client_secret=' + secretID + '&code=' + token,
+			 xhrFields: {
+			      withCredentials: true
+			   }
+		}).done(function() {
+			console.log('done')
+		});
+	
+	
+	}*/
+
+
+
+
+
+
+
+
 
 	// Ok here is where I am.. I'm requesting permission when the user presses the btn.
 	// User gets taken to github, and return to me with a query param in url.
@@ -14,34 +163,40 @@ define(['jquery'], function($){
 	// Then I can look into websockts to get it automating.
 	// Also would like to use xhr instead of jquery ajax.
 
-	var token;
-	
-	
-	
-	function listen() {
-	
-		$('.js-post').click(function(e){
-			
-		
-			window.location.href = authHost;
-		
-		
-			e.preventDefault();
-		})
-		
-	}
+	/*******var token,
+		clientID = '4e3a2ccec7c91a9eb26c',
+		authHost = 'https://github.com/login/oauth/authorize?client_id=' + clientID + '&redirect_uri=' + window.location.href + '&scope=public_repo';	
 		
 	// Check to see if user is returning with
 	// a valid token
-	(window.location.href.split('code=').length > 1) ? token = window.location.href.split('code=')[1] : listen();
-	
-	var clientID = '4e3a2ccec7c91a9eb26c',
-		authHost = 'https://github.com/login/oauth/authorize?client_id=' + clientID + '&redirect_uri=' + window.location.href + '&scope=public_repo';	
+	(window.location.href.split('code=').length > 1) ? token = window.location.href.split('code=')[1].split('&')[0] : false;
 
 	
+	console.log(token)
 	
 	
-
+	$('.js-form').delegate($('.js-post'), 'click', function(e){
+	
+	
+		var inpVal = $(this).find('input')[0].value;
+		var tareaVal = $(this).find('textarea')[0].value;
+	
+		console.log(inpVal, tareaVal)
+		
+		this.setAttribute('action', 'https://api.github.com/repos/'+ inpVal +'/repo/issues/'+$('body').attr('data-issueID')+'/comments/1')
+		
+		this.submit();
+		
+		e.preventDefault();
+		
+	
+	})*/
+	
+	
+	
+	
+	
+	
 	
 	
 	

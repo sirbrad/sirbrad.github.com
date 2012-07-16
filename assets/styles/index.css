@@ -808,16 +808,9 @@ code {
   margin-right: -10px;
 }
 
-@-webkit-keyframes hey {
-  from {
-    -webkit-transform: scale(0.8);
-  }
-}
-
 .comment__avatar {
   position: relative;
   z-index: 2;
-  -webkit-animation: hey .4s ease-in;
 }
 
 .comment__id {
