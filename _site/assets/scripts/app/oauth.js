@@ -47,7 +47,7 @@ define(['jquery'], function($){
 					success: function(data, status, jqXHR){
 						
 						if (status === 'success') {
-							var form = $('.js-form'),
+							var form = $('.js-post-comment'),
 								textarea = form.find('textarea')[0];
 							
 							var comment = {
