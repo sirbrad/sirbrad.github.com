@@ -1,5 +1,6 @@
 define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 
+	window.store = window.localStorage;
 
 	var bod = document.body,
 		listing,
@@ -14,7 +15,7 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 		init: function(config) {
 		
 			if (config && typeof(config) == 'object') {
-		        $.extend(comm.config, config);
+		        $.extend(o.config, config);
 		    }
 		    
 		    o.$container = o.config.container;
@@ -99,6 +100,8 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 				})
 			} else {
 			
+				console.log(window.store)
+			
 				o.postComment();
 			}
 		
@@ -128,9 +131,10 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 					SLEEP ON IT. SO CLOSE.!
 				 */
 				
-				window_store = window.localStorage;
 				
-				window_store.setItem('token', token);
+				window.store.setItem('token', token);
+				
+				
 			
 			}
 		})
@@ -158,124 +162,8 @@ $(document).ready(function() {
     o.init();
 });
 
+console.log(window.store)
 
-
-
-
-
-
-/*
-
-		var config = {
-			user: 'sirbrad',
-			//issueID: document.body.getAttribute('data-issueID'),
-			path: 'https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + document.body.getAttribute('data-issueID') + '/comments'
-		};
-
-
-
-		// We need to check if there are any comments to grab
-		(function(o){
-		
-			xhr({ 
-				url: o.path,
-				callback: function(data) {
-					console.log(typeof data.responseText) // the result is a string which is shit. Need to use a json parser so will just use jquery
-				}
-			})
-		
-		}(config))
-	
-
-	*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	/*var comm = {
-	
-		config: {
-			user: 'sirbrad',
-			issueID: document.body.getAttribute('data-issueID')
-		},
-		
-		init: function(config) {
-		
-		this.config['path'] = 'https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + this.config.issueID + '/comments';
-			
-			console.log(this)
-			
-		
-		},
-	
-	}
-	
-		
-	
-	xhr({
-		//url: comm.config.path
-	})
-	
-	comm.init();*/
-	
-	
-	//console.log(xhr)
-	
-	
-	
-	/*var xhr = new XMLHttpRequest();
-	xhr.open('GET', 'https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + o.config.issueID + '/comments', true);
-	xhr.onload = function(){  //instead of onreadystatechange
-	    //do something
-		console.log(xhr)
-	};
-	xhr.send();*/
-	
-	
-	/*
-	
-	function createCORSRequest(method, url){
-	    var xhr = new XMLHttpRequest();
-	    if ("withCredentials" in xhr){
-	        xhr.open(method, url, true);
-	    } else if (typeof XDomainRequest != "undefined"){
-	        xhr = new XDomainRequest();
-	        xhr.open(method, url);
-	    } else {
-	        xhr = null;
-	    }
-	    return xhr;
-	}
-	
-	var request = createCORSRequest("get", "http://www.nczonline.net/");
-	if (request){
-	    request.onload = function(){
-	        //do something with request.responseText
-	    };
-	    request.send();
-	}
-
-	// Make request
-	$.ajax('https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + o.config.issueID + '/comments', {
-		headers: {Accept: "application/vnd.github.full+json"},
-		success: function(data) {
-			//setup(data);
-			console.log(data)
-		}
-	});
-	
-	*/
 
 
 })
