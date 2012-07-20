@@ -3,7 +3,12 @@
    
 .comments {
 	background-color: rgba(240, 240, 240, 1);
+	display: none; // Hide on load
 	padding: 1em;
+}
+
+.has-comments {
+	display: block;
 }
 
 // Listing
@@ -55,6 +60,8 @@
 }
 
 .comment__id {
+	display: inline-block;
+	margin-bottom: .4em;
 	text-transform: capitalize;
 	font-weight: bold;
 }
@@ -119,6 +126,12 @@
 .post-comment {
 	background-color: rgba(0, 0, 0, .3);
 	color: #fff;
+	
+	&.comment--error {
+		background-color: rgba(255, 0, 0, .5);
+	
+		@include transition(background-color 200ms cubic-bezier(0.51, 0.01, 0.37, 0.98));
+	}
 }
 
 .comment__hint {
@@ -165,6 +178,8 @@
 	font-weight: bold;
 	padding: 1em 0;
 	text-align: center;
+	position: relative;
+	z-index: 1;
 	
 	@include transition(background-color 0.1s ease);
 	
@@ -179,10 +194,20 @@
 	}
 }
 
+@-webkit-keyframes snap {
+	0% { -webkit-transform: translateY(3em); }
+}
 
+@-webkit-keyframes snap {
+	0% { -webkit-transform: translateY(3em); }
+}
 
+.error__item {
+	display: none;
+	text-align: center;
+}
 
-
-
-
-
+.comment--error .error__item {
+	display: block;
+	-webkit-animation: snap .1s  linear;
+}

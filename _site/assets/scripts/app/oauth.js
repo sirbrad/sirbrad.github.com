@@ -9,7 +9,7 @@ define(['jquery'], function($){
 	btn.click(function(e){
 	
 	
-		var pop = open('https://github.com/login/oauth/authorize?client_id=' + clientID + '&scope=public_repo,user&redirect_uri=' + location.origin + '/login.html', 'pop', 'width=1015,height=500');
+		var pop = open('https://github.com/login/oauth/authorize?client_id=' + clientID + '&scope=public_repo,user&redirect_uri=' + location.origin + '/login.html', 'pop', 'width=920,height=500');
 	
 		
 		e.preventDefault();

@@ -768,7 +768,12 @@ code {
    ========================================================================== */
 .comments {
   background-color: #f0f0f0;
+  display: none;
   padding: 1em;
+}
+
+.has-comments {
+  display: block;
 }
 
 .comment__listing {
@@ -814,6 +819,8 @@ code {
 }
 
 .comment__id {
+  display: inline-block;
+  margin-bottom: .4em;
   text-transform: capitalize;
   font-weight: bold;
 }
@@ -875,6 +882,14 @@ code {
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
 }
+.post-comment.comment--error {
+  background-color: rgba(255, 0, 0, 0.5);
+  -webkit-transition: background-color 200ms cubic-bezier(0.51, 0.01, 0.37, 0.98);
+  -moz-transition: background-color 200ms cubic-bezier(0.51, 0.01, 0.37, 0.98);
+  -ms-transition: background-color 200ms cubic-bezier(0.51, 0.01, 0.37, 0.98);
+  -o-transition: background-color 200ms cubic-bezier(0.51, 0.01, 0.37, 0.98);
+  transition: background-color 200ms cubic-bezier(0.51, 0.01, 0.37, 0.98);
+}
 
 .comment__hint {
   display: block;
@@ -923,6 +938,8 @@ code {
   font-weight: bold;
   padding: 1em 0;
   text-align: center;
+  position: relative;
+  z-index: 1;
   -webkit-transition: background-color 0.1s ease;
   -moz-transition: background-color 0.1s ease;
   -ms-transition: background-color 0.1s ease;
@@ -935,6 +952,28 @@ code {
 .btn:active {
   position: relative;
   top: 1px;
+}
+
+@-webkit-keyframes snap {
+  0% {
+    -webkit-transform: translateY(3em);
+  }
+}
+
+@-webkit-keyframes snap {
+  0% {
+    -webkit-transform: translateY(3em);
+  }
+}
+
+.error__item {
+  display: none;
+  text-align: center;
+}
+
+.comment--error .error__item {
+  display: block;
+  -webkit-animation: snap .1s  linear;
 }
 
 @media (min-width:768px) {
@@ -973,6 +1012,7 @@ code {
 
   .btn {
     font-size: 1.25em;
+    padding: 1.5em 0;
   }
 }
 @media (min-width:800px) {
