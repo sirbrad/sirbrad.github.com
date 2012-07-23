@@ -13,6 +13,16 @@
 
 // Listing
 
+@-webkit-keyframes enter {
+	from { opacity: 0; -webkit-transform: translateY(1em); }
+	to { opacity: 1; -webkit-transform: none;}
+}
+
+@-moz-keyframes enter {
+	from { opacity: 0; -webkit-transform: translateY(1em); }
+	to { opacity: 1; -webkit-transform: none;}
+}
+
 .comment__listing {
 	list-style: none;
 	margin-bottom: 0;
@@ -24,6 +34,11 @@
 	& + .comment__item {
 		margin-top: 2em;
 	}
+}
+
+.is-new {
+	-webkit-animation: enter .6s ease;
+	-moz-animation: enter .6s ease;
 }
 
 .comment__item .bod {
