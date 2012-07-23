@@ -1,6 +1,82 @@
 define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 
-	window.store = window.localStorage;
+
+
+	var container = $('.js-comments'),
+		bod = document.body,
+		path = 'https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + bod.getAttribute('data-issueID') + '/comments',
+		listing;
+		
+	// Create the element that will hold the comments
+	listing = document.createElement('ol');
+	listing.className = 'comment__listing';
+	
+	function formatDate(str) {
+	
+		var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+			newDate = new Date(str),
+			currentDay = newDate.getDate(),
+			currentMonth = newDate.getMonth(),
+			currentYear = newDate.getFullYear();
+			
+		return currentDay + ' ' + months[currentMonth] + ' ' + currentYear;
+		
+	}
+	
+	
+	function appendData(data) {
+		
+		// Loop through the data and create elements using template
+		$.each(data, function(i){
+			
+			comment = tpl({
+				useravatar: data[i].user.avatar_url,
+				username: data[i].user.login,
+				url: data[i].user.url.split('users/')[1],
+				content: data[i].body_html,
+				date: formatDate(data[i].created_at),
+				commenturl: data[i].url
+			});
+			
+			// Add rendered template to 
+			listing.innerHTML += comment;
+	
+		});
+	
+		container
+			.append(listing)
+			.addClass('has-comments');
+
+	}
+	
+	
+	
+	// Grab our comments
+	(function grabData() {
+	
+		$.ajax({
+			url: path,
+			headers: {Accept: "application/vnd.github.full+json"},
+			dataType: 'json',
+			success: function(data) {
+				
+				if (data.length) {
+					appendData(data);
+				}
+			}
+		});
+		
+	}());
+
+
+
+
+
+
+
+
+
+	/*window.store = window.localStorage;
 
 	var bod = document.body,
 		listing,
@@ -129,7 +205,7 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 					OF CHECKING LOCAL STORAGE BEFORE CALLIGN THE POP UP WINDOW
 					TO VERIFY USER. NEED TO SET A GLOBAL BUT WILL BE GOOD TO
 					SLEEP ON IT. SO CLOSE.!
-				 */
+				 *
 				
 				
 				window.store.setItem('token', token);
@@ -155,14 +231,14 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 			}
 		})*
 		
-	})*/
+	})*
 
 
 $(document).ready(function() {
     o.init();
 });
 
-console.log(window.store)
+console.log(window.store)*/
 
 
 
