@@ -3,6 +3,7 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 	window.store = window.localStorage;
 
 	var container = $('.js-comments'),
+		commentContainer = $('.js-post-comment'),
 		clientID = '4e3a2ccec7c91a9eb26c',
 		issueID = document.body.getAttribute('data-issueID'),
 		path = 'https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueID + '/comments',
@@ -27,9 +28,6 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 	
 	function err(elem) {
 	
-		// Function was being called everytime request?
-	
-				
 		elem.html('<p class="h1">This is embarrassing!</p><p>Try reload the page, if that magical trick doesn\'t resolve the problem then hit me up on <a href="https://twitter.com/Bradleyfew">twitter</a>!<p>')
 			.css('display', 'block');
 		
@@ -56,6 +54,9 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 				
 				appendData(arr, true);
 				
+			},
+			error: function() {
+				err(commentContainer);
 			}
 		});
 
@@ -106,6 +107,9 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 				if (data.length) {
 					appendData(data);
 				}
+			},
+			error: function() {
+				err(container);
 			}
 		});
 		
@@ -139,6 +143,9 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 				// Reset the textarea value
 				textarea[0].value = '';
 				
+			},
+			error: function() {
+				err(commentContainer);
 			}
 		});
 		
@@ -152,6 +159,9 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 			success: function(data, status, jqXHR){
 
 				postComment();
+			},
+			error: function() {
+				err(commentContainer);
 			}
 		})
 	
@@ -200,8 +210,7 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 	
 	
 	// Comment Events
-	
-	$('.js-post-comment').on('click', 'input', function(e){
+		commentContainer.on('click', 'input', function(e){
 	
 		// Validate this shit!
 		validate($(this).parent());
@@ -221,6 +230,9 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 				
 				authenticateUser();
 					
+			},
+			error: function() {
+				err(commentContainer);
 			}
 		})
 	})
