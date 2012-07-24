@@ -1,4 +1,4 @@
-define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
+define(['jquery', 'tpl!../templates/comments.tpl', 'tpl!../templates/error.tpl'], function($, commentTpl, errorTpl){
 
 	window.store = window.localStorage;
 
@@ -29,7 +29,7 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 	
 	function err(elem) {
 	
-		elem.html('<p class="h1">This is embarrassing!</p><p>Try reload the page, if that magical trick doesn\'t resolve the problem then hit me up on <a href="https://twitter.com/Bradleyfew">twitter</a>!<p>')
+		elem.html(errorTpl())
 			.css('display', 'block');
 		
 	}
@@ -75,7 +75,7 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 		// Loop through the data and create elements using template
 		$.each(data, function(i){
 			
-			comment = tpl({
+			comment = commentTpl({
 				useravatar: data[i].user.avatar_url,
 				username: data[i].user.login,
 				url: data[i].user.url.split('users/')[1],
@@ -118,7 +118,6 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 	
 	
 
-
 	// Adding comments	
 	function postComment() {
 		
@@ -127,7 +126,7 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 			};
 	
 		$.ajax({
-			url: 'https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueID + '/comments',
+			url: path,
 			type: 'POST',
 			data: JSON.stringify(comment),
 			dataType: 'json',
