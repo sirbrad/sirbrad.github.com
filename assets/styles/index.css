@@ -877,36 +877,35 @@ code {
   }
 }
 
-.i--loader {
-  background-color: transparent;
-  border: 3px solid;
-  border-right-color: transparent;
-  color: #444;
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: -8px 0 0 -8px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  -webkit-animation: spin 1s infinite linear;
-  -moz-animation: spin 1s infinite linear;
-}
-.i--loader:after {
-  content: '';
-  border: 4px solid transparent;
-  border-left-color: inherit;
-  display: block;
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: -50%;
-  right: -50%;
-}
-
+/*.i--loader {
+	background-color: transparent;
+	border: 3px solid;
+	border-right-color: transparent;
+	color: #444;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -8px 0 0 -8px;
+	
+	@include radius(50%);
+	-webkit-animation: spin 1s infinite linear;
+	-moz-animation: spin 1s infinite linear;
+	
+	&:after {
+		content:'';
+		border: 4px solid transparent;
+		border-left-color: inherit;
+		display: block;
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: -50%;
+		right: -50%;
+	}
+}*/
 .post-comment {
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;

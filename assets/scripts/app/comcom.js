@@ -157,6 +157,7 @@ define(['jquery', 'tpl!../templates/comments.tpl', 'tpl!../templates/error.tpl']
 			url: 'https://api.github.com/user?access_token=' + window.store.getItem('token'),
 			type: 'GET',
 			success: function(data, status, jqXHR){
+			
 
 				postComment();
 			},
@@ -173,7 +174,7 @@ define(['jquery', 'tpl!../templates/comments.tpl', 'tpl!../templates/error.tpl']
 		// Check if user has a token stored		
 		if (!window.store.getItem('token')) {
 		
-			var popup = open('https://github.com/login/oauth/authorize?client_id=' + clientID + '&scope=public_repo,user&redirect_uri=' + location.origin + '/login.html', 'popup', 'width=920,height=500');
+			var popup = open('https://github.com/login/oauth/authorize?client_id=' + clientID + '&scope=public_repo,user&redirect_uri=' + 'http://' + location.host + '/login.html', 'popup', 'width=920,height=500');
 
 		} else {
 		

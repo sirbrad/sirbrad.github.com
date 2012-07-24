@@ -106,7 +106,9 @@
 	to { -moz-transform: rotate(360deg); }
 }
 
-.i--loader {
+// Unfortunately this is causing the images to black out when they
+// load. And it isnt a consistant breakage :(
+/*.i--loader {
 	background-color: transparent;
 	border: 3px solid;
 	border-right-color: transparent;
@@ -134,7 +136,7 @@
 		top: -50%;
 		right: -50%;
 	}
-}
+}*/
 
 // Posting
 
