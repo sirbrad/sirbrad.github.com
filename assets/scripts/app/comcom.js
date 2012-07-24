@@ -8,7 +8,8 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 		issueID = document.body.getAttribute('data-issueID'),
 		path = 'https://api.github.com/repos/sirbrad/sirbrad.github.com/issues/' + issueID + '/comments',
 		listing,
-		textarea;
+		textarea,
+		comment;
 		
 	// Create the element that will hold the comments
 	listing = document.createElement('ol');
@@ -38,7 +39,7 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 		var input = {
 			'text': comment.body,
 			'mode': 'gfm'
-		}
+		};
 	
 		$.ajax({
 			url: 'https://api.github.com/markdown',
@@ -48,7 +49,7 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 				
 				comment.body_html = data;
 				
-				var arr = []
+				var arr = [];
 				
 				arr.push(comment);
 				
@@ -163,7 +164,7 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 			error: function() {
 				err(commentContainer);
 			}
-		})
+		});
 	
 	}
 	
@@ -199,7 +200,7 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 					elem.removeClass('comment--error');
 				} 
 				
-			})
+			});
 			
 		} else {
 		
@@ -210,13 +211,13 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 	
 	
 	// Comment Events
-		commentContainer.on('click', 'input', function(e){
+	commentContainer.on('click', 'input', function(e){
 	
 		// Validate this shit!
 		validate($(this).parent());
 		
 		e.preventDefault();
-	})
+	});
 	
 	
 	window.addEventListener('message', function (e) {
@@ -234,9 +235,9 @@ define(['jquery', 'tpl!../templates/comments.tpl'], function($, tpl){
 			error: function() {
 				err(commentContainer);
 			}
-		})
-	})
+		});
+	});
 	
 
 
-})
+});
