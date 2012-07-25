@@ -65,7 +65,6 @@ define(['jquery', 'tpl!../templates/comments.tpl', 'tpl!../templates/error.tpl']
 		
 		}
 		
-		
 		function appendData(data, isNew) {
 		
 			// Remove class if found to stop double animation
@@ -241,7 +240,7 @@ define(['jquery', 'tpl!../templates/comments.tpl', 'tpl!../templates/error.tpl']
 		});
 		
 	}
-
+	
 	return {
 	
 		init: function(arg){

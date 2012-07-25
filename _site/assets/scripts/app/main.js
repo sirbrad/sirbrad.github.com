@@ -5,9 +5,9 @@ require.config({
 	}
 });
 
-//require(['comment-listing', 'oauth']);
 require(['comcom'], function(comcom){
 	
+	// Call comcom and pass in your username
 	comcom.init('sirbrad')
 	
 });
