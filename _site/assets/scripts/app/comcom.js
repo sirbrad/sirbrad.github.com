@@ -8,7 +8,7 @@ define(['jquery', 'tpl!../templates/comments.tpl', 'tpl!../templates/error.tpl']
 			commentContainer = $('.js-post-comment'),
 			clientID = '4e3a2ccec7c91a9eb26c',
 			issueID = document.body.getAttribute('data-issueID'),
-			path = 'https://api.github.com/repos/' + username + '/ ' + username + ' .github.com/issues/' + issueID + '/comments',
+			path = 'https://api.github.com/repos/' + username + '/' + username + '.github.com/issues/' + issueID + '/comments',
 			listing,
 			textarea,
 			comment;
