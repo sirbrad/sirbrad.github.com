@@ -6,4 +6,8 @@ require.config({
 });
 
 //require(['comment-listing', 'oauth']);
-require(['comcom']);
+require(['comcom'], function(comcom){
+	
+	comcom.init('sirbrad')
+	
+});
