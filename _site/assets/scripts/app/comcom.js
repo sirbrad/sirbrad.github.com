@@ -14,8 +14,6 @@ define(['jquery', 'tpl!../templates/comments.tpl', 'tpl!../templates/error.tpl']
 			textarea,
 			comment;
 			
-		console.log(path)
-			
 		// Create the element that will hold the comments
 		listing = document.createElement('ol');
 		listing.className = 'comment__listing';
