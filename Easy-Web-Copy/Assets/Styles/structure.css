@@ -1,0 +1,323 @@
+/* Structure.css
+ **********************************************************************/
+
+/* 	1. Base
+	2. Typography
+	3. Blocks
+	4. Responsive Shenanigans
+
+ **********************************************************************/
+ 
+ /* Uncomment this to show debug.css */
+  /* @import url('debug.css'); */
+
+/* 1. Base
+ **********************************************************************/
+ 
+article, aside,
+dialog, figure,
+footer, header,
+hgroup, menu,
+nav, section {
+	display:block;
+}
+
+html {
+	background-color:#F3F3F3;
+	color:#272123;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 100%;
+	line-height:1.5;
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	font-size:1em; 
+    margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: sans-serif;
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+ul,
+ol {
+    margin: 1em 0;
+    padding: 0 0 0 40px;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+img {
+    border: 0;
+}
+
+form {
+	margin:0;	
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+}
+
+button,
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+	text-decoration:none;	
+}
+
+a:hover,
+a:focus {
+	text-decoration:underline;	
+}
+
+
+/* 2. Typography
+ **********************************************************************/
+ 
+h1 {
+	font-size:2em;
+	line-height:1.5;
+}
+
+h2 {
+	font-size:1.5em;
+	line-height:1;
+}
+
+h3 {
+	font-size:1.25em;
+	line-height:1.2;
+}
+
+h4 {
+	font-size:1.125em;
+	line-height:1.333;
+}
+
+h5,
+h6 {
+	font-size:1em;
+	line-height:1.5;
+}
+
+h1, h2,
+h3, h4,
+h5, h6,
+p {
+	margin:0 0 1em;	
+}
+
+
+/* 3. Blocks
+ **********************************************************************/
+
+/* ClearFix - Ref: nicolasgallagher.com/micro-clearfix-hack/ */
+.cf {
+	zoom:1;
+}
+.cf:before,
+.cf:after {
+	content:"";
+	display:table;
+}
+
+.cf:after {
+	clear:both;
+}
+
+/* Media Block - Ref: www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/ */
+.media {
+	display:block;
+}
+
+.media .img {
+	float:left;
+	margin-right:10px;
+}
+
+.media .body {
+	overflow:hidden;
+	margin-bottom:0;
+}
+
+/*Hoz Block (Horizontal) - Ref: http://csswizardry.com/2011/09/the-nav-abstraction/ */
+.hoz {
+	list-style:none;
+	padding-left:0;
+}
+
+.hoz,
+.hoz dd {
+	margin-left:0;
+}
+
+.hoz li,
+.hoz dt,
+.hoz dd {
+	display:inline;
+}
+
+.hoz a {
+	display:inline-block;
+}
+
+/* Container Block */
+.contain {
+	margin-left:auto;
+	margin-right:auto;
+	max-width:680px;
+}
+
+.main {
+	background-color:#fff;
+	padding:0 10px;
+}
+
+
+
+/* 4. Header
+ **********************************************************************/
+
+header {
+	background-color:#76A19A;
+	border-bottom:1px solid rgba(0, 0, 0, 0.2);
+	margin-bottom:4em;
+	padding:10px;
+	text-align:center;
+}
+
+header p {
+	margin-bottom:0;	
+}
+
+.logo {
+	color:#fff;	
+	display:inline-block;
+    font-family: 'DroidSansBold', Helvetica, Arial, sans-serif;
+	font-size:1.375em; /* 22 / 16 */
+	margin-bottom:0;
+	padding:0 60px 0 45px;
+	position:relative;
+	text-shadow:1px 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.logo span {
+    font-family: monospace, serif;
+	opacity:0;
+	position:absolute;
+	top:-2px;
+	
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+	-ms-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+}
+
+.logo:hover,
+.logo:focus {
+	text-decoration:none;	
+}
+
+.logo:hover span,
+.logo:focus span {
+	opacity:1;
+}
+
+.p-open {
+	left:20px;	
+}
+
+.p-close {
+	right:20px;	
+}
+
+.logo:hover .p-open,
+.logo:focus .p-open {
+	left:0;
+}
+
+.logo:hover .p-close,
+.logo:focus .p-close {
+	right:0;
+}
+
+/* 5. Body
+ **********************************************************************/
+ 
+.body {
+	text-align:center;
+}
+
+.body h1 {
+    font-family: 'DroidSansRegular', Helvetica, Arial, sans-serif;
+	font-size:2.375em;  /* 38 / 16 */
+	font-weight:normal;
+	text-shadow:0 -1px 0 rgba(255, 255, 255, 1);
+}
+
+.area {
+	border:1px solid rgba(225, 225, 225, 0.9);
+	background:rgba(255, 255, 255, 0.9);
+	font-size:.75em; /* 12 / 16 */
+	margin:0  auto 1em;
+	min-height:200px;
+	padding:10px;
+	text-align:left;
+	width:92%;	
+}
+
+.output {
+	overflow-x:auto;	
+}
+
+.output p {
+	margin-bottom:0.2em;	
+}
+
+footer a {
+	color:#76A19A;
+}
