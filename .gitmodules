@@ -1,3 +1,6 @@
 [submodule "Labs/Easy-web-copy"]
 	path = Labs/Easy-web-copy
 	url = git://github.com/sirbrad/Easy-Web-Copy.git
+[submodule "Easy-Web-Copy"]
+	path = Easy-Web-Copy
+	url = git@github.com:sirbrad/Easy-Web-Copy.git
