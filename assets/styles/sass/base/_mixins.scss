@@ -33,3 +33,9 @@
 	-moz-box-sizing:$box-sizing;
 	box-sizing:$box-sizing;
 }
+
+@mixin hyphens ($hyphens) {
+	-webkit-hyphens:$hyphens;
+	-moz-hyphens:$hyphens;
+	hyphens:$hyphens;
+}

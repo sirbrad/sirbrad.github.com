@@ -10,6 +10,11 @@
 	word-wrap: break-word;
 }
 
+.post > p {
+	text-align: justify;
+	@include hyphens(auto);
+}
+
 
 // Darken on iteration
 @for $i from 1 through 10 {
