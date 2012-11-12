@@ -1,0 +1,24 @@
+// Set up your global variables
+@import "setup";
+
+// Call in base styles
+@import "base/mixins";
+@import "base/functions";
+@import "base/base";
+@import "base/helpers";
+@import "base/syntax";
+
+// Components
+@import "components/header";
+@import "components/body";
+@import "components/footer";
+@import "components/article";
+@import "components/comments";
+
+@media (min-width:768px) {
+	@import "components/768";
+}
+
+@media (min-width:800px) {
+	@import "components/800";
+}
