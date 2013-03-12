@@ -8,7 +8,7 @@
 
 .is-twitter {
 	color: #0084B4;
-	
+
 	&:hover,
 	&:focus {
 		color: darken(#0084B4, 10%);
@@ -17,9 +17,18 @@
 
 .is-github {
 	color: #ccc;
-	
+
 	&:hover,
 	&:focus {
 		color: darken(#ccc, 10%);
+	}
+}
+
+.is-mint {
+	color: #6FC818;
+
+	&:hover,
+	&:focus {
+		color: darken(#6FC818, 10%);
 	}
 }
