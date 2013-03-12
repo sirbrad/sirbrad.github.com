@@ -8,12 +8,13 @@
 .site-title {
 	font-weight: normal;
 	margin: 0;
+	line-height: 1;
 }
 
 .site-title a {
 	color: rgba(0, 0, 0, .5);
 	@include transition(letter-spacing .1s ease);
-	
+
 	&:hover,
 	&:focus {
 		text-decoration: none;
@@ -44,19 +45,19 @@
 	width: 50%;
 	@include box-sizing(border-box);
 	@include transition(background-color 0.1s ease);
-	
+
 	& + .nav__item {
 		border-left: 1px solid #eee;
 	}
-	
+
 	&:hover,
 	&:focus {
 		color: #ccc;
 	}
-	
+
 	&.is-current {
 		text-decoration: underline;
-		
+
 		&:before {
 			content: '';
 			background-color: $brand;
@@ -67,7 +68,7 @@
 			top:-10px;
 			left: 50%;
 			margin-left: -10px;
-			
+
 			@include transform(rotate(45deg));
 		}
 	}

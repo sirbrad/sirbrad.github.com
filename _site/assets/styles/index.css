@@ -10,7 +10,7 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: cambria, georgia, times, serif;
+  font-family: "PT Serif", serif;
   font-size: 16px;
   line-height: 1.8;
   color: #444444;
@@ -942,7 +942,7 @@ code {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: none;
-  font-family: cambria, georgia, times, serif;
+  font-family: "PT Serif", serif;
   font-size: 1em;
   width: 100%;
   -webkit-appearance: none;
