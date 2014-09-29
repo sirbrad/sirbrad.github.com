@@ -1,5 +1,3 @@
-auto: true
-server: true
 markdown: rdiscount
-pygments: true
+highligher: pygments
 permalink: /:title
