@@ -1,60 +1,27 @@
 <!doctype html>
-<!--[if IE 8]><html class="no-js ie8" lang="en"><![endif]-->
-<!--[if IE 9]><html class="no-js ie9" lang="en"><![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
+<html class="no-js" lang="en">
+  <head>
     <meta charset="utf-8">
-	<title>{{ page.title }} - Bradleyfew.com</title>
-    <script src="/assets/scripts/utils/modernizr.min.js"></script>
-    <meta name="author" content="sirBrad" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
-    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"/>
-    <link type="text/plain" rel="author" href="humans.txt" />
-    <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/styles/index.css" media="(min-width:0)" />
-    <!--[if (lt IE 9) & (!IEMobile)]>
-    	<link rel="stylesheet" href="/assets/styles/ie.css">
-    <![endif]-->
-</head>
-<body data-issueID="{{ page.issueID }}">
-	<header class="site-head contain" role="banner">
-		<div class="media cf">
-			<a href="/" class="site-img img" title="Bradleyfew.com"><img src="https://avatars3.githubusercontent.com/u/752422?v=2&s=460" alt="" /></a>
-			<div class="bod">
-				<h1 class="h2 site-title"><a href="/" title="Bradleyfew.com"><strong>Bradley Few</strong><small><br>Developer</small></a></h1>
-			</div>
-		</div>
-		<nav class="site-nav" role="navigation">
-			<a href="/" class="nav__item" title="Blog">Blog</a>
-			<a href="/about.html" class="nav__item" title="About">About</a>
-		</nav>
-	</header>
-	<div class="site-body contain">
-		{{ content }}
-	</div>
-	<footer class="site-foot">
-		<a href="https://twitter.com/bradleyfew" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @bradleyfew</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		<p class="push--top">&copy; 2014 Bradley Few.</p>
-	</footer>
-
-	<!-- Checking for a date and loading script specifically for any blog post -->
-	{% if page.date %}
-	    <script data-main="/assets/scripts/app/main" src="/assets/scripts/require.min.js"></script>
-	{% endif %}
+  	<title>Bradleyfew.com</title>
+      <meta name="author" content="sirBrad" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+      <link type="text/plain" rel="author" href="humans.txt" />
+      <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="/assets/styles/index.css"/>
+  </head>
+  <body>
+  	{{ content }}
     <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-30730866-1']);
+      _gaq.push(['_trackPageview']);
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-30730866-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-</body>
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
 </html>
