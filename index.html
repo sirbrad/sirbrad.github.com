@@ -3,11 +3,26 @@ layout: default
 title: Bradley Few
 ---
 
-{% for post in site.posts %}
-	<article class="island post post--listing post--id-{{forloop.index0}}">
-		<header>
-			<h1 class="h2 post__title"><a href="{{ post.url }}" title="Permanent link to: '{{ post.title }}'">{{ post.title }} </a></h1>
-			<time datetime="{{ post.date | date: "%Y-%m-%d"  }}" pubdate="">{{ post.date | date_to_long_string }}</time>
-		</header>
-	</article>
-{% endfor %}
+<div class="contain">
+  <header role="contentinfo" class="site-head">
+    <h1 class="site-brand">
+      <strong>Bradley Few</strong> 
+      &#x2013; Developer @ 
+      <a href="http://mintdigital.com/" target="_blank">Mint Digital</a>
+    </h1>
+    <nav class="nav">
+      <a href="https://twitter.com/bradleyfew" 
+          class="block block--twitter" target="_blank">
+        Twitter
+      </a>
+      <a href="https://github.com/sirbrad" 
+          class="block block--github" target="_blank">
+        GitHub
+      </a>
+      <a href="https://instagram.com/bradleyfew/" 
+          class="block block--instagram" target="_blank">
+        Instagram
+      </a>
+    </nav>
+  </header>
+</div>

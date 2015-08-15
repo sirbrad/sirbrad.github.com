@@ -1,7 +1,0 @@
-/* the humans responsible & colophon */
-/* humanstxt.org */
-
-/* TEAM */
-Bradley Few
-Site: http://twitter.com/#!/bradleyfew
-Location: Pluto
