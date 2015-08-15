@@ -1,3 +1,5 @@
 markdown: rdiscount
 highligher: pygments
 permalink: /:title
+gems:
+  - octopress-autoprefixer

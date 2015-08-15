@@ -1,0 +1,253 @@
+/Users/bradleyfew/.rbenv/versions/2.1.3/bin/ruby -r ./siteconf20150815-93070-a7tkpg.rb extconf.rb
+checking for random()... yes
+checking for srandom()... yes
+checking for rand()... yes
+checking for srand()... yes
+checking size of unsigned long... 8
+checking size of unsigned int... 4
+checking size of unsigned int... 4
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling amalloc.c
+compiling basename.c
+compiling Csio.c
+compiling css.c
+compiling docheader.c
+compiling dumptree.c
+compiling emmatch.c
+emmatch.c:113:20: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+    case 2: if ( e = empair(f,first,last,match=2) )
+                 ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+emmatch.c:113:20: note: place parentheses around the assignment to silence this warning
+    case 2: if ( e = empair(f,first,last,match=2) )
+                   ^
+                 (                               )
+emmatch.c:113:20: note: use '==' to turn this assignment into an equality comparison
+    case 2: if ( e = empair(f,first,last,match=2) )
+                   ^
+                   ==
+1 warning generated.
+compiling flags.c
+flags.c:49:11: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if ( not = (*name == '!') ) {
+             ~~~~^~~~~~~~~~~~~~~~
+flags.c:49:11: note: place parentheses around the assignment to silence this warning
+        if ( not = (*name == '!') ) {
+                 ^
+             (                   )
+flags.c:49:11: note: use '==' to turn this assignment into an equality comparison
+        if ( not = (*name == '!') ) {
+                 ^
+                 ==
+1 warning generated.
+compiling generate.c
+generate.c:640:19: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+    else if ( tag = pseudo(ref->link) ) {
+              ~~~~^~~~~~~~~~~~~~~~~~~
+generate.c:640:19: note: place parentheses around the assignment to silence this warning
+    else if ( tag = pseudo(ref->link) ) {
+                  ^
+              (                      )
+generate.c:640:19: note: use '==' to turn this assignment into an equality comparison
+    else if ( tag = pseudo(ref->link) ) {
+                  ^
+                  ==
+generate.c:734:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+                if ( ref = bsearch(&key, T(*f->footnotes), S(*f->footnotes),
+                     ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+generate.c:734:12: note: place parentheses around the assignment to silence this warning
+                if ( ref = bsearch(&key, T(*f->footnotes), S(*f->footnotes),
+                         ^
+generate.c:734:12: note: use '==' to turn this assignment into an equality comparison
+                if ( ref = bsearch(&key, T(*f->footnotes), S(*f->footnotes),
+                         ^
+                         ==
+2 warnings generated.
+compiling github_flavoured.c
+compiling html5.c
+compiling markdown.c
+markdown.c:255:11: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if ( end = strstr(T(t->text), "-->") ) {
+             ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+markdown.c:255:11: note: place parentheses around the assignment to silence this warning
+        if ( end = strstr(T(t->text), "-->") ) {
+                 ^
+             (                              )
+markdown.c:255:11: note: use '==' to turn this assignment into an equality comparison
+        if ( end = strstr(T(t->text), "-->") ) {
+                 ^
+                 ==
+markdown.c:303:16: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+                if ( closing = (c == '/') ) c = flogetc(&f);
+                     ~~~~~~~~^~~~~~~~~~~~
+markdown.c:303:16: note: place parentheses around the assignment to silence this warning
+                if ( closing = (c == '/') ) c = flogetc(&f);
+                             ^
+                     (                   )
+markdown.c:303:16: note: use '==' to turn this assignment into an equality comparison
+                if ( closing = (c == '/') ) c = flogetc(&f);
+                             ^
+                             ==
+markdown.c:477:8: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if ( x=is_extra_dt(t->next, clip) )
+             ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+markdown.c:477:8: note: place parentheses around the assignment to silence this warning
+        if ( x=is_extra_dt(t->next, clip) )
+              ^
+             (                           )
+markdown.c:477:8: note: use '==' to turn this assignment into an equality comparison
+        if ( x=is_extra_dt(t->next, clip) )
+              ^
+              ==
+markdown.c:491:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+    if ( ret = is_discount_dt(t,clip) )
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+markdown.c:491:14: note: place parentheses around the assignment to silence this warning
+    if ( ret = is_discount_dt(t,clip) )
+             ^
+         (                           )
+markdown.c:491:14: note: use '==' to turn this assignment into an equality comparison
+    if ( ret = is_discount_dt(t,clip) )
+             ^
+             ==
+markdown.c:819:16: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if ( p->ident = malloc(4+strlen(prefix)+S(q->text)) )
+             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+markdown.c:819:16: note: place parentheses around the assignment to silence this warning
+        if ( p->ident = malloc(4+strlen(prefix)+S(q->text)) )
+                      ^
+             (                                             )
+markdown.c:819:16: note: use '==' to turn this assignment into an equality comparison
+        if ( p->ident = malloc(4+strlen(prefix)+S(q->text)) )
+                      ^
+                      ==
+markdown.c:901:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if ( para = (text != q->next) )
+             ~~~~~^~~~~~~~~~~~~~~~~~~
+markdown.c:901:12: note: place parentheses around the assignment to silence this warning
+        if ( para = (text != q->next) )
+                  ^
+             (                       )
+markdown.c:901:12: note: use '==' to turn this assignment into an equality comparison
+        if ( para = (text != q->next) )
+                  ^
+                  ==
+markdown.c:924:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if ( para = (q != text) ) {
+             ~~~~~^~~~~~~~~~~~~
+markdown.c:924:12: note: place parentheses around the assignment to silence this warning
+        if ( para = (q != text) ) {
+                  ^
+             (                 )
+markdown.c:924:12: note: use '==' to turn this assignment into an equality comparison
+        if ( para = (q != text) ) {
+                  ^
+                  ==
+markdown.c:964:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if ( para = (q != text) ) {
+             ~~~~~^~~~~~~~~~~~~
+markdown.c:964:12: note: place parentheses around the assignment to silence this warning
+        if ( para = (q != text) ) {
+                  ^
+             (                 )
+markdown.c:964:12: note: use '==' to turn this assignment into an equality comparison
+        if ( para = (q != text) ) {
+                  ^
+                  ==
+markdown.c:1256:23: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        else if ( list_class = islist(ptr, &indent, f->flags, &list_type) ) {
+                  ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+markdown.c:1256:23: note: place parentheses around the assignment to silence this warning
+        else if ( list_class = islist(ptr, &indent, f->flags, &list_type) ) {
+                             ^
+                  (                                                      )
+markdown.c:1256:23: note: use '==' to turn this assignment into an equality comparison
+        else if ( list_class = islist(ptr, &indent, f->flags, &list_type) ) {
+                             ^
+                             ==
+9 warnings generated.
+compiling mkdio.c
+mkdio.c:27:16: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if ( ret->ctx = calloc(sizeof(MMIOT), 1) ) {
+             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+mkdio.c:27:16: note: place parentheses around the assignment to silence this warning
+        if ( ret->ctx = calloc(sizeof(MMIOT), 1) ) {
+                      ^
+             (                                  )
+mkdio.c:27:16: note: use '==' to turn this assignment into an equality comparison
+        if ( ret->ctx = calloc(sizeof(MMIOT), 1) ) {
+                      ^
+                      ==
+mkdio.c:266:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+    if ( len = S(f.out) ) {
+         ~~~~^~~~~~~~~~
+mkdio.c:266:14: note: place parentheses around the assignment to silence this warning
+    if ( len = S(f.out) ) {
+             ^
+         (             )
+mkdio.c:266:14: note: use '==' to turn this assignment into an equality comparison
+    if ( len = S(f.out) ) {
+             ^
+             ==
+2 warnings generated.
+compiling mktags.c
+mktags.c:44:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+main()
+^
+1 warning generated.
+compiling pgm_options.c
+compiling rdiscount.c
+rdiscount.c:50:17: warning: implicit declaration of function 'rb_rdiscount__get_flags' is invalid in C99 [-Wimplicit-function-declaration]
+    int flags = rb_rdiscount__get_flags(self);
+                ^
+1 warning generated.
+compiling resource.c
+compiling setup.c
+compiling tags.c
+compiling toc.c
+compiling version.c
+compiling xml.c
+xml.c:49:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if ( entity = mkd_xmlchar(c) )
+             ~~~~~~~^~~~~~~~~~~~~~~~
+xml.c:49:14: note: place parentheses around the assignment to silence this warning
+        if ( entity = mkd_xmlchar(c) )
+                    ^
+             (                      )
+xml.c:49:14: note: use '==' to turn this assignment into an equality comparison
+        if ( entity = mkd_xmlchar(c) )
+                    ^
+                    ==
+xml.c:72:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if ( entity = mkd_xmlchar(c) )
+             ~~~~~~~^~~~~~~~~~~~~~~~
+xml.c:72:14: note: place parentheses around the assignment to silence this warning
+        if ( entity = mkd_xmlchar(c) )
+                    ^
+             (                      )
+xml.c:72:14: note: use '==' to turn this assignment into an equality comparison
+        if ( entity = mkd_xmlchar(c) )
+                    ^
+                    ==
+2 warnings generated.
+compiling xmlpage.c
+xmlpage.c:33:13: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if ( title = mkd_doc_title(p) )
+             ~~~~~~^~~~~~~~~~~~~~~~~~
+xmlpage.c:33:13: note: place parentheses around the assignment to silence this warning
+        if ( title = mkd_doc_title(p) )
+                   ^
+             (                       )
+xmlpage.c:33:13: note: use '==' to turn this assignment into an equality comparison
+        if ( title = mkd_doc_title(p) )
+                   ^
+                   ==
+1 warning generated.
+linking shared-object rdiscount.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 rdiscount.bundle ./.gem.20150815-93070-1x88z26
+installing default rdiscount libraries

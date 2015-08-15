@@ -1,0 +1,12 @@
+/Users/bradleyfew/.rbenv/versions/2.1.3/bin/ruby -r ./siteconf20150815-93070-az4e6o.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling posix-spawn.c
+linking shared-object posix_spawn_ext.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 posix_spawn_ext.bundle ./.gem.20150815-93070-1vv1yfi
+installing default posix_spawn_ext libraries
