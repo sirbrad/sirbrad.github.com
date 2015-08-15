@@ -1,0 +1,88 @@
+html {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #444;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  background: #fff;
+  margin: 0; }
+
+html, body {
+  height: 100%; }
+
+a {
+  text-decoration: none; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover,
+a:active {
+  outline: 0; }
+
+.contain {
+  max-width: 680px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 1em;
+  display: flex;
+  align-items: center; }
+
+.site-head {
+  flex: 1; }
+
+.site-brand {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 300; }
+
+.site-brand strong {
+  font-size: 22px;
+  font-weight: 300; }
+
+.site-brand a {
+  color: #00ca53; }
+
+.nav {
+  font-size: 18px; }
+
+.block {
+  display: inline-block;
+  padding: 4px;
+  color: #fff;
+  line-height: 1;
+  position: relative; }
+  .block:before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 2px;
+    background: inherit;
+    bottom: 0;
+    left: 0;
+    -moz-transition: bottom 0.125s ease;
+    -o-transition: bottom 0.125s ease;
+    -webkit-transition: bottom 0.125s ease;
+    -ms-transition: bottom 0.125s ease;
+    transition: bottom 0.125s ease; }
+  .block:hover:before, .block:focus:before {
+    bottom: -4px; }
+  .block:active {
+    top: 1px; }
+
+.block--snapchat {
+  background: #fffc00;
+  color: #333; }
+
+.block--twitter {
+  background: #55acee; }
+
+.block--github {
+  background: #999999; }
+
+.block--instagram {
+  background: #3f729b; }
