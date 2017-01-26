@@ -36,7 +36,7 @@ body {
 }
 html, body {
   height: 100%;
-} 
+}
 
 // links
 a {
@@ -82,7 +82,6 @@ a:active {
 }
 .site-brand a {
   color: #00ca53;
-  // border-bottom: 2px solid;
 }
 .nav {
   font-size: 18px;
@@ -92,26 +91,23 @@ a:active {
   padding: 4px;
   color: #fff;
   line-height: 1;
-  position: relative;
 
   &:before {
     content: '';
-    width: 100%;
     position: absolute;
-    height: 2px;
     background: inherit;
-    bottom: 0;
+    height: 100vh;
+    width: 100vw;
     left: 0;
-    @include transition(bottom .125s ease);
+    top: 0;
+    z-index: -1;
+    opacity: 0;
+    @include transition(opacity .125s cubic-bezier(.68,.82,.83,.67));
   }
 
   &:hover:before,
   &:focus:before {
-    bottom: -4px;
-  }
-
-  &:active {
-    top: 1px;
+    opacity: 1;
   }
 }
 .block--snapchat {

@@ -63,25 +63,24 @@ a:active {
   display: inline-block;
   padding: 4px;
   color: #fff;
-  line-height: 1;
-  position: relative; }
+  line-height: 1; }
   .block:before {
     content: '';
-    width: 100%;
     position: absolute;
-    height: 2px;
     background: inherit;
-    bottom: 0;
+    height: 100vh;
+    width: 100vw;
     left: 0;
-    -moz-transition: bottom 0.125s ease;
-    -o-transition: bottom 0.125s ease;
-    -webkit-transition: bottom 0.125s ease;
-    -ms-transition: bottom 0.125s ease;
-    transition: bottom 0.125s ease; }
+    top: 0;
+    z-index: -1;
+    opacity: 0;
+    -moz-transition: opacity 0.125s cubic-bezier(0.68, 0.82, 0.83, 0.67);
+    -o-transition: opacity 0.125s cubic-bezier(0.68, 0.82, 0.83, 0.67);
+    -webkit-transition: opacity 0.125s cubic-bezier(0.68, 0.82, 0.83, 0.67);
+    -ms-transition: opacity 0.125s cubic-bezier(0.68, 0.82, 0.83, 0.67);
+    transition: opacity 0.125s cubic-bezier(0.68, 0.82, 0.83, 0.67); }
   .block:hover:before, .block:focus:before {
-    bottom: -4px; }
-  .block:active {
-    top: 1px; }
+    opacity: 1; }
 
 .block--snapchat {
   background: #fffc00;
